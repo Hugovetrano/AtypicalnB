@@ -1,6 +1,7 @@
 @import 'variables';
 
-header { // -------------------- Header item
+header {
+  // -------------------- Header item
   height: $navbar-height;
   width: 100%;
 
@@ -20,7 +21,8 @@ header { // -------------------- Header item
 
   overflow: hidden;
 
-  .header-container { // -------------------- Header's container
+  .header-container {
+    // -------------------- Header's container
     height: 100%;
     width: 100%;
     display: flex;
@@ -29,14 +31,16 @@ header { // -------------------- Header item
     padding-bottom: 15px;
   }
 
-  img { // -------------------- AtypicalnB logo
+  img {
+    // -------------------- AtypicalnB logo
     position: absolute;
     top: 15px;
     left: 50%;
     transform: translateX(-50%);
   }
 
-  ul { // -------------------- Header's menu
+  ul {
+    // -------------------- Header's menu
     width: 100%;
 
     display: flex;
@@ -45,13 +49,15 @@ header { // -------------------- Header item
     margin-bottom: 0;
     padding: 0;
 
-    li { // -------------------- Header's menu items
+    li {
+      // -------------------- Header's menu items
       list-style-type: none;
       font-size: 1.3rem;
     }
   }
 
-  ul a { // -------------------- Link inside header's menu items (rails paths)
+  ul a {
+    // -------------------- Link inside header's menu items (rails paths)
     color: $sec-color;
     font-weight: 500;
 
@@ -65,7 +71,8 @@ header { // -------------------- Header item
 
     transition: .2s ease;
 
-    &:hover { // -------------------- Hover effect over header's menu items
+    &:hover {
+      // -------------------- Hover effect over header's menu items
       color: $thi-color;
       text-decoration-thickness: 2px;
       text-underline-offset: 8px;

@@ -1,0 +1,141 @@
+@import 'variables';
+
+.home-offer-card {
+    // -------------------- The main container of a card unit
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 550px;
+    border-radius: 7px;
+    overflow: hidden;
+
+    &:hover {
+        // -------------------- Shaddow effect at the card's hover
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.20);
+    }
+
+    img {
+        // -------------------- The illustration of the offer 
+        height: 250px;
+        object-fit: cover;
+        width: 100%;
+    }
+}
+
+.home-offer-card-infos {
+    // -------------------- Subsection, containing "infos" section (everything, without the illustration)
+    display: flex;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 15px;
+}
+
+.home-offer-card-infos-left {
+    // -------------------- Subsection containing the title and the descriptionof the offer
+    width: 80%;
+}
+
+.home-offer-card-infos-right {
+    // -------------------- Subsection containing the price per night, and the CTA
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.home-offer-card-infos-name {
+    // -------------------- Title of the offer
+    font-size: 1.6rem;
+}
+
+.home-offer-card-infos-description {
+    // -------------------- Description of the offer
+    font-size: 1rem;
+    color: grey;
+}
+
+.home-offer-card-cta {
+    // -------------------- CTA of the offer
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: $sec-color;
+    color: $pri-color;
+
+    border-radius: 7px;
+
+    padding: 11px 11px;
+
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 2px;
+    
+    overflow: hidden;
+
+    transition: ease .2s;
+    
+    &:hover {// -------------------- Colors and underline effects at CTA's hover
+        color: $pri-color;
+        background-color: $thi-color;
+        text-underline-offset: 7px;
+    }
+}
+
+@media screen and (min-width: 551px) and (max-width: 805px) {
+
+    // -------------------- Medium Devices
+    .home-offer-card-infos {
+        // -------------------- Subsection, containing "infos" section (everything, without the illustration)
+        display: flex;
+        flex-direction: column;
+    }
+
+    .home-offer-card-infos-left {
+        // -------------------- Subsection containing the title and the descriptionof the offer
+        width: 100%;
+    }
+
+    .home-offer-card-infos-right {
+        // -------------------- Subsection containing the price per night, and the CTA
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .home-offer-card-cta {
+        // -------------------- CTA of the offer
+        width: 45%;
+        padding: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    // -------------------- Small devices
+    .home-offer-card-infos {
+        // -------------------- Subsection, containing "infos" section (everything, without the illustration)
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .home-offer-card-infos-left {
+        // -------------------- Subsection containing the title and the descriptionof the offer
+        width: 100%;
+    }
+
+    .home-offer-card-infos-right {
+        // -------------------- Subsection containing the price per night, and the CTA
+        width: 100%;
+        align-items: center;
+    }
+
+    .home-offer-card-cta {
+        // -------------------- CTA of the offer
+        width: 75%;
+        padding: 16px;
+    }
+}

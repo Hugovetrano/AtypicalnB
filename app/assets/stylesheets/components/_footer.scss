@@ -1,0 +1,32 @@
+@import 'variables';
+
+footer {
+    height: $footer-height;
+    background-color: $pri-color;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 3px 3px 16px 16px rgba(125, 125, 125, .15);
+    display: flex;
+    align-items: center;
+
+    ul {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-bottom: 0;
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: $sec-color;
+
+                &:hover {
+                    color: $thi-color;
+                }
+            }
+        }
+    }
+}

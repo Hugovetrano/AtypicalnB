@@ -11,6 +11,34 @@
   </head>
 
   <body>
+  <header>
+    <div class="header-container">
+      <%# <h2>AtypicalnB.</h2> %>
+      <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Test-logo" width="350"></a>
+    <ul class="">
+      <li><%=  %><%= link_to 'Home', root_path %></li>
+      <li><%= link_to 'Properties', root_path %></li>
+      <li><%= link_to 'My offers', root_path %></li>
+      <li><%= link_to 'Profil', root_path %></li>
+        <li ><%= link_to 'Logout', root_path %></li>
+      <% if current_user %>
+        <li ><%= link_to 'Login', root_path %></li>
+      <% else %>
+      <% end %>
+    </ul>
+    </div>
+  </header>
     <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <footer>
+      <ul>
+        <li><%= link_to 'Contact', root_path %></li>
+        <li><%= link_to 'Conditions générales', root_path %></li>
+        <li><%= link_to 'Plan du site', root_path %></li>
+        <li><%= link_to "Infos sur l'entrperise", root_path %></li>
+        <li><%= link_to 'Recrutement', root_path %></li>
+      </ul>
+    </footer>
   </body>
 </html>

@@ -1,0 +1,7 @@
+@import 'variables';
+
+.yield-container { // -------------------- Div container of the variable content
+    // Margin with navbar's and footer's values, because of they're positioned "fixed". (Hidding content) 
+    margin-top: $navbar-height;
+    margin-bottom: $footer-height;
+}

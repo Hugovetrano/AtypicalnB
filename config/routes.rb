@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :properties do
     resources :bookings, only: [:create]
   end
+
   resources :bookings, except: [:create]
 
   namespace :owner do
@@ -18,5 +19,6 @@ Rails.application.routes.draw do
     end
     resources :properties, only: [:index]
   end
+
   resources :users, only: %i[show]
 end

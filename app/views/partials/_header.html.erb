@@ -4,13 +4,13 @@
       <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Test-logo" width="350"></a>
     <ul class="">
       <li><%=  %><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'Properties', root_path %></li>
-      <li><%= link_to 'My offers', root_path %></li>
+      <li><%= link_to 'Properties', properties_path %></li>
+      <li><%= link_to 'My offers', owner_properties_path %></li>
       <li><%= link_to 'Profil', root_path %></li>
-        <li ><%= link_to 'Logout', root_path %></li>
-      <% if current_user %>
-        <li ><%= link_to 'Login', root_path %></li>
+      <% if user_signed_in? %>
+        <li ><%= link_to 'Logout', destroy_user_session_path %></li>
       <% else %>
+        <li ><%= link_to 'Login', new_user_session_path %></li>
       <% end %>
     </ul>
     </div>

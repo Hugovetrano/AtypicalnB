@@ -1,6 +1,7 @@
 @import 'variables';
 
-footer { // -------------------- Footer item
+footer {
+    // -------------------- Footer item
     height: $footer-height;
     width: 100%;
 
@@ -14,7 +15,8 @@ footer { // -------------------- Footer item
     display: flex;
     align-items: center;
 
-    ul { // -------------------- Footer's menu
+    ul {
+        // -------------------- Footer's menu
         width: 100%;
 
         display: flex;
@@ -22,14 +24,17 @@ footer { // -------------------- Footer item
 
         margin-bottom: 0;
 
-        li { // -------------------- Footer's menu items
+        li {
+            // -------------------- Footer's menu items
             list-style-type: none;
 
-            a { // -------------------- Links inside the footer's menu items
+            a {
+                // -------------------- Links inside the footer's menu items
                 text-decoration: none;
                 color: $sec-color;
 
-                &:hover { // -------------------- Hover effects over fotter's menu items
+                &:hover {
+                    // -------------------- Hover effects over fotter's menu items
                     color: $thi-color;
                 }
             }

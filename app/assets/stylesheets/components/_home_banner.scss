@@ -1,0 +1,68 @@
+@import 'variables';
+
+.home-banner {
+    // -------------------- Banner container
+    width: 100%;
+    height: 400px;
+    background-image: linear-gradient(90deg, rgba(2, 0, 36, 0.4067752100840336) 0%, rgba(0, 0, 0, 0.35915616246498594) 100%), url('https://images.unsplash.com/photo-1573121892681-48e1dfc074b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
+    background-size: cover;
+    background-position: center;
+
+    padding: 5rem 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    border-radius: 5px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+
+    &:hover {
+        // -------------------- Shaddow effect at the card's hover
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.20);
+    }
+}
+
+.home-banner-title {
+    // -------------------- Main title of the banner
+    color: white;
+    font-weight: bolder;
+    font-size: 2.2rem;
+}
+
+.home-banner-description {
+    // -------------------- The sentence between the main title and the CTA
+    color: white;
+    width: 70%;
+}
+
+.home-banner-cta {
+    // -------------------- The CTA of the banner
+    width: 350px;
+
+    background-color: $sec-color;
+    color: $pri-color;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    border-radius: 25px;
+    padding: 15px 30px;
+
+    text-decoration: underline;
+    text-underline-offset: 30px;
+    text-decoration-thickness: 2px;
+
+    overflow: hidden;
+
+    transition: ease .2s;
+
+    &:hover {
+        // -------------------- Colors and underline effect at CTA's hover
+        color: $pri-color;
+        background-color: $thi-color;
+        text-underline-offset: 7px;
+    }
+}

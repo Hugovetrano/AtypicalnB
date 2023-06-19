@@ -1,12 +1,22 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
-}
+@import 'variables';
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
+header {
+  height: $header-height;
+  background-color: $pri-color;
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  color: $thi-color;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  .navbar-menu {
+    width: 70%;
+    display: flex;
+    justify-content: space-evenly;
+
+    .navbar-menu-item {
+      list-style-type: none;
+    }
+  }
 }

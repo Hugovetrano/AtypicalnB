@@ -1,7 +1,7 @@
-class PropertiesController < ApplicationController
+class Owner::PropertiesController < ApplicationController
   before_action :set_flat, only: [:show]
   def index
-    @properties = Property.find_by(user_id: current_user.id)
+    @properties = Property.where(user_id: current_user.id)
   end
 
   def show

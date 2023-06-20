@@ -13,6 +13,8 @@
     </div>
 </div>
 <% end %>
-<div class="w-100 justify-content-center d-flex">
-<%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
-</div>
+<% if current_user.owner_mode %>
+    <div class="w-100 justify-content-center d-flex">
+    <%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
+    </div>
+<% end %>

@@ -15,8 +15,8 @@
 
           <ul class="">
             <li><%=  %><%= link_to 'Home', root_path, class: "owner-mode-on" %></li>
-            <li><%= link_to 'Properties', properties_path, class: "owner-mode-on" %></li>
-            <li><%= link_to 'Pending acceptations', owner_properties_path, class: "owner-mode-on" %></li>
+            <li><%= link_to 'My Properties', owner_properties_path, class: "owner-mode-on" %></li>
+            <li><%= link_to 'My Next Guests', owner_bookings_path, class: "owner-mode-on" %></li>
             <li><%= link_to 'Profil', user_path(current_user), class: "owner-mode-on" %></li>
             <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "owner-mode-on" %></li>
         <% else %>
@@ -32,8 +32,8 @@
 
           <ul class="">
             <li><%=  %><%= link_to 'Home', root_path%></li>
-            <li><%= link_to 'Properties', properties_path%></li>
-            <li><%= link_to 'Pending reservations', owner_properties_path%></li>
+            <li><%= link_to 'Our experiences', properties_path%></li>
+            <li><%= link_to 'My Reservations', bookings_path%></li>
             <li><%= link_to 'Profil', user_path(current_user)%></li>
             <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}%></li>
         <% end %>

@@ -15,13 +15,23 @@
     </div>
 
     <div>
+      <% array = [] %>
+      <%@property.bookings.each do |booking|%>
+      <% array << { %>
+        <% from: booking.start_date, %>
+        <% to: booking.end_date %>
+      <% } %>
+      <% end %>
+    </div>
+    <div ></div>
+
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
         <%= f.input :start_date,
                     as: :string,
-                    input_html: { placeholder: 'Start date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", controller: "datepicker" } } %>
+                    input_html: { placeholder: 'Start date', data: { controller: "datepicker", datepicker_array_value: array.to_json} } %>
         <%= f.input :end_date,
                     as: :string,
-                    input_html: { placeholder: 'End date', data: { minDate: "2023-06-23", alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d",  controller: "datepicker" } } %>
+                    input_html: { placeholder: 'End date', data: { controller: "datepicker", datepicker_array_value: array.to_json} } %>
         <%= f.submit %>
       <% end %>
     </div>

@@ -1,0 +1,56 @@
+/* ---------- Owners/my_guest ---------- */
+
+.owner-card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  border-radius: 7px;
+}
+.owner-card-img {
+  height: 150px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 7px;
+}
+.owner-card-name {
+  font-size: 1.6rem;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+.owner-card-description {
+  font-size: 1rem;
+  color: grey;
+  margin-bottom: 20px;
+}
+
+.owner-card-info {
+  padding: 15px
+}
+
+.owner-card-price {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: $green
+}
+
+.owner-card:hover {
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.20);
+}
+
+.owner-refuse {
+  color: rgb(255, 105, 105);
+}
+
+.owner-accept {
+  color: rgb(14, 201, 86);
+}
+
+.owner-accept, .owner-refuse {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+}

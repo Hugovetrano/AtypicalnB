@@ -1,1 +1,32 @@
-<h1>Index of Bookings</h1>
+
+<h2>Pending(<%= @bookings.where(accepted: nil).count %>)</h2>
+<div class="owner-card-container">
+  <% @bookings.where(accepted: nil).each do |booking| %>
+    <div class="owner-card">
+      <img src="https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Picture of the product" class="owner-card-img">
+      <div class="owner-car-info">
+        <h3 class="owner-card-name"><%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+        <p class="owner-card-description"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></p>
+        <div class="owner-choice-container">
+          <%= link_to "Accept", accept_owner_booking_path(booking), class: "owner-accept", data: {turbo_method: :patch} %>
+          <%= link_to "Refuse", refuse_owner_booking_path(booking), class: "owner-refuse", data: {turbo_method: :patch} %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<h2>Accepted(<%= @bookings.where(accepted: true).count %>)</h2>
+<div class="owner-card-container">
+    <% @bookings.where(accepted: true).each do |booking| %>
+      <div class="owner-card">
+        <img src="https://images.unsplash.com/photo-1612198790700-0ff08cb726e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1287&q=80" alt="Picture of the product" class="owner-card-img">
+        <div class="owner-car-info">
+          <h3 class="owner-card-name"><%= booking.user.first_name %> <%= booking.user.last_name %></h3>
+          <p class="owner-card-description"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></p>
+          <p class="owner-card-price"><strong>+<%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %></strong>€ </p>
+
+        </div>
+      </div>
+    <% end %>
+  </div>

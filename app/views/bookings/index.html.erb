@@ -8,7 +8,14 @@
           </div>
           <div class="home-offer-card-infos-right">
               <p class="home-offer-card-price">Total : <strong><%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %></strong>€ </p>
-              <a link_to, property_path class="home-offer-card-cta">Edit</a>
+              <% if booking.accepted %>
+                <span class="badge rounded-pill bg-success">Accepted</span>
+              <% elsif booking.accepted == false %>
+                <span class="badge rounded-pill bg-danger">Refused</span>
+              <% else %>
+                <span class="badge rounded-pill bg-warning">Pending...</span>
+              <% end %>
+              <%# <a link_to, property_path class="home-offer-card-cta">Edit</a> %>
           </div>
       </div>
   </div>

@@ -1,6 +1,6 @@
-<%= @bookings.each do |booking| %>
+<% @bookings.each do |booking| %>
   <div class="home-offer-card ">
-      <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
+      <%= cl_image_tag booking.property.photos[0].key, class:"home-offer-card-img"%>
       <div class="home-offer-card-infos">
           <div class="home-offer-card-infos-left">
               <h3 class="home-offer-card-infos-name"><%= booking.property.name %></h3>

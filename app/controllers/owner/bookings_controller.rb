@@ -1,4 +1,5 @@
 class Owner::BookingsController < ApplicationController
+  before_action :check_owner_mode
   before_action :set_booking, only: [:accept, :refuse]
 
   def index
@@ -29,5 +30,11 @@ class Owner::BookingsController < ApplicationController
 
   def set_booking
     @booking = Booking.find(params[:id])
+  end
+
+  def check_owner_mode
+    unless current_user.owner_mode
+      redirect_to root_path
+    end
   end
 end

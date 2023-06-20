@@ -6,106 +6,28 @@
 
 <h2 class="w-100 text-center sec-color">Our best sellers.</h2>
 
-<%# <% xxxxx.each do |xxx| %>
-
-<%# THE SEVEN DIVS SHOULD BE REPLACED BY ONE DIV BETWEEN A EACH ITERATION %>
+<% @properties.each do |property| %>
 
 <div class="home-offer-card">
-        <img src="https://i.ibb.co/WysZ7CC/image.png" alt="The villa picture" class="home-offer-card-img">
+<%# IL FAUT REMPLACER IMG SRC PAR L4IMAGE TAG, SANS OUBLIER D4APPLIQUER LES CLASS POUR L'INTEGRATION A LA CARD %>
+        <img src="https://i.ibb.co/WysZ7CC/image.png" alt="<%= property.name %>" class="home-offer-card-img">
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
+                <p class="property-rating-stars">
+                <% property.rating.times do %>
+                    ★
+                <% end %>
+                </p>
+
+                <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
+                <p class="home-offer-card-infos-description"><%= property.overview %></p>
             </div>
             <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
+                <p class="home-offer-card-price"><strong>$<%= property.price_per_night %></strong> / Night</p>
+                <%= link_to 'Book Now!', property_path(property), class: "home-offer-card-cta" %>
             </div>
         </div>
     </div>
 
-    <div class="home-offer-card">
-        <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
+<% end %>
 
-    <div class="home-offer-card">
-        <img src="https://i.ibb.co/YXNvKH4/mountains-1587287-640.jpg" alt="The villa picture" class="home-offer-card-img">
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <img src="https://i.ibb.co/kyHfj4q/image.png" alt="The villa picture" class="home-offer-card-img">
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="home-offer-card">
-        <img src="https://i.ibb.co/P4ty1Pd/fire-2946038-640.jpg" alt="The villa picture" class="home-offer-card-img">
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <img src="https://i.ibb.co/jwSgQc2/ice-645768-640.jpg" alt="The villa picture" class="home-offer-card-img">
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">The best villa</h3>
-                <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-      <img src="https://i.ibb.co/SsSQMyM/sand-castle-1639994-640.jpg" alt="The villa picture" class="home-offer-card-img">
-      <div class="home-offer-card-infos">
-        <div class="home-offer-card-infos-left">
-            <h3 class="home-offer-card-infos-name">The best villa</h3>
-            <p class="home-offer-card-infos-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint praesentium commodi voluptates nam ab voluptas dolorem! Quam deleniti atque doloribus.</p>
-        </div>
-        <div class="home-offer-card-infos-right">
-            <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-            <a href="" class="home-offer-card-cta">Book now !</a>
-        </div>
-      </div>
-    </div>
-
-<%# <% end %>

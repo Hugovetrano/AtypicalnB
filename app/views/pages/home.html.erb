@@ -9,11 +9,11 @@
 <% @properties.each do |property| %>
 
 <div class="home-offer-card">
-       <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
+    <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
                 <% if property.rating %>
-                  <p class="property-rating-stars">
+                <p class="property-rating-stars">
                 <% property.rating.times do %>
                     ★
                 <% end %>

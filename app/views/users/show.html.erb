@@ -1,41 +1,56 @@
-<div class="container-profile">
-  <div class="profile-presentation">
-    <h2> Presentation</h2>
-    <img src="app/assets/images/profile_current_user.jpg" alt="current_user">
-    <div>
-      <%= current_user.first_name %>
-      <%= current_user.last_name %>
-      <%= current_user.overview %>
+<div >
+
+
+
+<div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+  <div class="card p-4">
+    <div class="image d-flex flex-column justify-content-center align-items-center">
+      <button class="btn btn-secondary"><img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1683229854/gcuc6muq1e3dbrtbb2ex.jpg" class="avatar" /></button>
+      <p class="name mt-3"><%= current_user.first_name %> <%= current_user.last_name %></p>
+      <p class="name">Rating host: 5 <i class="fa-solid fa-star" style="color: #F1C27B;"></i></p>
+      <p class="idd"><%= current_user.email %></p>
+      <p class="idd">Phone: <%= current_user.phone_number %></p>
+      <div class="d-flex flex-row justify-content-center align-items-center">
+        <span class="number"><%= current_user.properties.count %> <span class="follow"><%= link_to "Properties", owner_properties_path, class: "links-users"  %></span> // <%= current_user.bookings.count %> <span class="follow"><%= link_to "Bookings", owner_bookings_path, class: "links-users"  %></span></span>
+      </div>
+      <div class=" d-flex mt-2">
+        <%= link_to "Update Profile", root_path, class: "home-offer-card-cta" %>
+      </div>
+      <div class="text mt-3">
+        <p><%= current_user.overview %></p>
+      </div>
+      <div class=" px-2 rounded mt-4 date ">
+        <span class="join">Joined May,2021</span>
+      </div>
     </div>
   </div>
+</div>
 
-  <div class="profile-contact">
-    <h3>Contact</h3>
-    <%= current_user.email %>
-    <%= current_user.phone_number %>
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="My Properties">
+    <h3>My Properties</h3>
+
+  <%= Property.where(@user.id == current_user).limit(3) %>
+
   </div>
 
-  <%= link_to "Update Profile" %>
-
-
-<div class="My Properties">
-  <h3>My Properties</h3>
-
-<%= Property.where(user == current_user).limit(3) %>
-
-</div>
 
 
 
-
-<div class="My Bookings">
-  <h3>My Bookings</h3>
-
-
-
-
-
-</div>
+  <div class="My Bookings">
+    <h3>My Bookings</h3>
+  </div>
 
 
 

@@ -9,8 +9,7 @@
 <% @properties.each do |property| %>
 
 <div class="home-offer-card">
-<%# IL FAUT REMPLACER IMG SRC PAR L4IMAGE TAG, SANS OUBLIER D4APPLIQUER LES CLASS POUR L'INTEGRATION A LA CARD %>
-        <img src="https://i.ibb.co/WysZ7CC/image.png" alt="<%= property.name %>" class="home-offer-card-img">
+       <img src="https://i.ibb.co/WysZ7CC/image.png" alt="<%= property.name %>" class="home-offer-card-img">
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
                 <p class="property-rating-stars">
@@ -18,7 +17,6 @@
                     ★
                 <% end %>
                 </p>
-
                 <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
                 <p class="home-offer-card-infos-description"><%= property.overview %></p>
             </div>
@@ -28,6 +26,4 @@
             </div>
         </div>
     </div>
-
 <% end %>
-

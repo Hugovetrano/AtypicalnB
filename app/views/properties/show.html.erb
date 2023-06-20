@@ -1,27 +1,38 @@
 <div class="container">
   <div class="">
     <div div class="home-offer-card ">
-        <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
+        <%= cl_image_tag @property.photos[0].key, class:"home-offer-card-img"%>
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
                 <h3 class="home-offer-card-infos-name"><%= @property.name %></h3>
                 <p class="home-offer-card-infos-description"><%= @property.overview %></p>
             </div>
             <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong><%= @property.price_per_night %></strong> / Night</p>
-                <a link_to, property_path class="home-offer-card-cta">Book now !</a>
+                <p class="home-offer-card-price"><strong><%= @property.price_per_night %></strong>$ / Night</p>
             </div>
         </div>
     </div>
 
     <div>
+      <% array = [] %>
+      <%@property.bookings.each do |booking|%>
+      <% array << { %>
+        <% from: booking.start_date, %>
+        <% to: booking.end_date %>
+      <% } %>
+      <% end %>
+    </div>
+    <div ></div>
+
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
+        <label for="">Select your desired dates</label>
+        <input type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value= <%= array.to_json %>>
         <%= f.input :start_date,
-                    as: :string,
-                    input_html: { placeholder: 'Start date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", minDate: "today", controller: "datepicker" } } %>
+                    as: :hidden,
+                    input_html: { id: "start_date"} %>
         <%= f.input :end_date,
-                    as: :string,
-                    input_html: { placeholder: 'End date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", minDate: "06.20.2023", controller: "datepicker" } } %>
+                    as: :hidden,
+                    input_html: { id: "end_date" } %>
         <%= f.submit %>
       <% end %>
     </div>

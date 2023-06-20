@@ -3,15 +3,8 @@
     <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
     <div class="home-offer-card-infos">
         <div class="home-offer-card-infos-left">
-        <% if property.rating %>
-                <p class="property-rating-stars">
-                <% property.rating.times do %>
-                    ★
-                <% end %>
-                </p>
-                <% end %> 
             <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
-            <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ') %><%= link_to ' read more', property_path(property) %></p>
+            <p class="home-offer-card-infos-description"><%= property.overview %></p>
         </div>
         <div class="home-offer-card-infos-right">
             <p class="home-offer-card-price"><strong><%= property.price_per_night %></strong>€ / Night</p>
@@ -20,8 +13,6 @@
     </div>
 </div>
 <% end %>
-<% if current_user.owner_mode %>
-    <div class="w-100 justify-content-center d-flex">
-    <%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
-    </div>
-<% end %>
+<div class="w-100 justify-content-center d-flex">
+<%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
+</div>

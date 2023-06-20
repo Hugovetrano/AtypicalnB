@@ -26,6 +26,10 @@
         font-size: 1.5rem;
         color: $thi-color;
     }
+
+    p {
+        margin-bottom: 0;
+    }
 }
 
 .home-offer-card-infos {
@@ -46,6 +50,7 @@
     width: 30%;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 15px;
 }
 
@@ -73,9 +78,9 @@
 
     padding: 11px 11px;
 
-    text-decoration: underline;
-    text-underline-offset: 30px;
-    text-decoration-thickness: 2px;
+    text-decoration: none;
+    //text-underline-offset: 30px;
+    //text-decoration-thickness: 2px;
     
     overflow: hidden;
 
@@ -84,7 +89,7 @@
     &:hover {// -------------------- Colors and underline effects at CTA's hover
         color: $pri-color;
         background-color: $thi-color;
-        text-underline-offset: 7px;
+        //text-underline-offset: 7px;
     }
 
 }

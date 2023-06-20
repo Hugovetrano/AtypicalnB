@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
   before_action :set_flat, only: [:show, :update, :destroy]
+
   def index
     @properties = Property.all
   end
@@ -29,6 +30,6 @@ class PropertiesController < ApplicationController
   end
 
   def property_params
-    params.require(:property).permit(:name, :address, :city, :zipcode, :overview, :rating, :price_per_night, :guest_capacity)
+    params.require(:property).permit(:name, :address, :city, :zipcode, :overview, :rating, :price_per_night, :guest_capacity, photos: [])
   end
 end

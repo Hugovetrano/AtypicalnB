@@ -1,17 +1,18 @@
- <%= link_to "Add your rend property", new_property_path, class: "home-offer-card-cta" %>
-
 <% @properties.each do |property| %>
-  <div div class="home-offer-card">
-      <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
-      <div class="home-offer-card-infos">
-          <div class="home-offer-card-infos-left">
-              <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
-              <p class="home-offer-card-infos-description"><%= property.overview %></p>
-          </div>
-          <div class="home-offer-card-infos-right">
-              <p class="home-offer-card-price"><strong><%= property.price_per_night %></strong>€ / Night</p>
-              <%= link_to "Book now !", property_path(property), class: "home-offer-card-cta" %>
-          </div>
-      </div>
-  </div>
+<div div class="home-offer-card">
+    <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
+    <div class="home-offer-card-infos">
+        <div class="home-offer-card-infos-left">
+            <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
+            <p class="home-offer-card-infos-description"><%= property.overview %></p>
+        </div>
+        <div class="home-offer-card-infos-right">
+            <p class="home-offer-card-price"><strong><%= property.price_per_night %></strong>€ / Night</p>
+            <%= link_to "Book now !", property_path(property), class: "home-offer-card-cta" %>
+        </div>
+    </div>
+</div>
 <% end %>
+<div class="w-100 justify-content-center d-flex">
+<%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
+</div>

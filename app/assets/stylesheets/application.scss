@@ -11,7 +11,20 @@
 @import "components/index";
 @import "pages/index";
 
-body {
-    min-height: 200vh;
-    overflow: hidden;
+@import 'variables';
+
+.pri-color {
+    color: $pri-color;
+}
+
+.sec-color {
+    color: $sec-color;
+}
+
+.thi-color {
+    color: $thi-color;
+}
+
+.fou-color {
+    color: $fou-color;
 }

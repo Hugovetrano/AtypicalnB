@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="">
+    <div div class="home-offer-card ">
+        <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
+        <div class="home-offer-card-infos">
+            <div class="home-offer-card-infos-left">
+                <h3 class="home-offer-card-infos-name"><%= @property.name %></h3>
+                <p class="home-offer-card-infos-description"><%= @property.overview %></p>
+            </div>
+            <div class="home-offer-card-infos-right">
+                <p class="home-offer-card-price"><strong><%= @property.price_per_night %></strong> / Night</p>
+                <a link_to, property_path class="home-offer-card-cta">Book now !</a>
+            </div>
+        </div>
+    </div>
+
+    <div>
+      <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
+        <%= f.input :start_date %>
+        <%= f.input :end_date %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

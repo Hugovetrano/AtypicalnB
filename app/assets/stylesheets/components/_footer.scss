@@ -1,29 +1,40 @@
 @import 'variables';
 
 footer {
+    // -------------------- Footer item
     height: $footer-height;
+    width: 100%;
+
     background-color: $pri-color;
+
     position: fixed;
     bottom: 0;
-    width: 100%;
+
     box-shadow: 3px 3px 16px 16px rgba(125, 125, 125, .15);
+
     display: flex;
     align-items: center;
 
     ul {
-        display: flex;
+        // -------------------- Footer's menu
         width: 100%;
+
+        display: flex;
         justify-content: space-evenly;
+
         margin-bottom: 0;
 
         li {
+            // -------------------- Footer's menu items
             list-style-type: none;
 
             a {
+                // -------------------- Links inside the footer's menu items
                 text-decoration: none;
                 color: $sec-color;
 
                 &:hover {
+                    // -------------------- Hover effects over fotter's menu items
                     color: $thi-color;
                 }
             }

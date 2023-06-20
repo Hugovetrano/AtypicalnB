@@ -1,95 +1,28 @@
 @import 'variables';
 
 header {
+  // -------------------- Header item
   height: $navbar-height;
+  width: 100%;
+
   background-color: $pri-color;
+  color: $sec-color;
+  box-shadow: 3px 3px 16px 16px rgba(125, 125, 125, .15);
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: $sec-color;
+
+  position: fixed;
+  top: 0;
 
   padding-inline: 50px;
 
   overflow: hidden;
 
-  position: fixed;
-  top: 0;
-  width: 100%;
-
-  box-shadow: 3px 3px 16px 16px rgba(125, 125, 125, .15);
-
-  img {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  h2 {
-      font-size: 3em;
-      text-align: center;
-      font-weight: 700;
-  }
-
-  ul {
-      width: 100%;
-
-      display: flex;
-      justify-content: space-evenly;
-      margin-bottom: 0;
-      padding: 0;
-
-
-      li {
-          list-style-type: none;
-          font-size: 1.3rem;
-      }
-  }
-
-  ul a {
-      color: $sec-color;
-      text-decoration: underline;
-      text-underline-offset: 50px;
-
-      transition: ease .2s;
-      font-weight: 500;
-
-      display: flex;
-      flex-direction: column;
-      position: relative;
-
-      transition: .2s ease;
-
-      &:hover {
-        color: $thi-color;
-        text-decoration-thickness: 2px;
-        text-underline-offset: 8px;
-      }
-
-      // &::after {
-      //     content: '';
-      //     padding: 30px;
-      //     background-color: $thi-color;
-      //     position: absolute;
-      //     top: 200px;
-      //     transition: .2s ease;
-      //     left: 50%;
-      //     transform-origin: center;
-      //     transform: translateX(-50%) rotateZ(45deg);
-      // }
-
-      // &:hover {
-      //   color: $thi-color;
-
-      //     &::after {
-      //         top: 55px;
-      //     }
-      // }
-  }
-
   .header-container {
+    // -------------------- Header's container
     height: 100%;
     width: 100%;
     display: flex;
@@ -97,4 +30,53 @@ header {
     justify-content: flex-end;
     padding-bottom: 15px;
   }
+
+  img {
+    // -------------------- AtypicalnB logo
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  ul {
+    // -------------------- Header's menu
+    width: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    margin-bottom: 0;
+    padding: 0;
+
+    li {
+      // -------------------- Header's menu items
+      list-style-type: none;
+      font-size: 1.3rem;
+    }
+  }
+
+  ul a {
+    // -------------------- Link inside header's menu items (rails paths)
+    color: $sec-color;
+    font-weight: 500;
+
+    text-decoration: underline;
+    text-underline-offset: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    transition: .2s ease;
+
+    &:hover {
+      // -------------------- Hover effect over header's menu items
+      color: $thi-color;
+      text-decoration-thickness: 2px;
+      text-underline-offset: 8px;
+    }
+  }
+
 }

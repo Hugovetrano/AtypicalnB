@@ -7,7 +7,7 @@ class Owner::BookingsController < ApplicationController
   end
 
   def accept
-    @booking.accept = true
+    @booking.accepted = true
     if @booking.save
       redirect_to owner_bookings_path
     else
@@ -17,7 +17,7 @@ class Owner::BookingsController < ApplicationController
   end
 
   def refuse
-    @booking.refuse = false
+    @booking.accepted = false
     if @booking.save
       redirect_to owner_bookings_path
     else

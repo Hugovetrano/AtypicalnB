@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  has_many_attached :photos
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
@@ -21,6 +20,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :property_id, :photos [])
+    params.require(:booking).permit(:start_date, :end_date, :property_id, photos: [])
   end
 end

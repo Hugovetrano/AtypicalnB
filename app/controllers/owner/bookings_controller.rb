@@ -11,6 +11,7 @@ class Owner::BookingsController < ApplicationController
       redirect_to owner_bookings_path
     else
       # Add error alert
+      flash[:alert] = "Failed to accept booking."
     end
   end
 
@@ -20,6 +21,7 @@ class Owner::BookingsController < ApplicationController
       redirect_to owner_bookings_path
     else
       # Add error alert
+      flash[:alert] = "Failed to refuse booking."
     end
   end
 

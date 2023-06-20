@@ -25,12 +25,14 @@
     <div ></div>
 
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
+        <label for="">Select your desired dates</label>
+        <input type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value= <%= array.to_json %>>
         <%= f.input :start_date,
-                    as: :string,
-                    input_html: { placeholder: 'Start date', data: { controller: "datepicker", datepicker_array_value: array.to_json} } %>
+                    as: :hidden,
+                    input_html: { id: "start_date"} %>
         <%= f.input :end_date,
-                    as: :string,
-                    input_html: { placeholder: 'End date', data: { controller: "datepicker", datepicker_array_value: array.to_json} } %>
+                    as: :hidden,
+                    input_html: { id: "end_date" } %>
         <%= f.submit %>
       <% end %>
     </div>

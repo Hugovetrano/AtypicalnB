@@ -1,0 +1,118 @@
+@import 'variables';
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $sec-color;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    bottom: 4px;
+    left: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: $fif-color;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px $fif-color;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px); /* Positionné à droite lorsque activé */
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* Switch on state */
+  .mode_on .slider {
+    background-color: $fif-color;
+  }
+  
+  .mode_on input:checked + .slider:before {
+    transform: translateX(26px); /* Positionné à droite lorsque activé */
+  }
+  
+  /* Animation for mode_on class */
+  .mode_on .slider:before {
+    -webkit-animation: moveRight .4s forwards;
+    animation: moveRight .4s forwards;
+  }
+  
+  .mode_off .slider:before {
+    -webkit-animation: moveLeft .4s forwards;
+    animation: moveLeft .4s forwards;
+  }
+  
+  @-webkit-keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(26px);
+    }
+  }
+  
+  @keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(26px);
+    }
+  }
+  
+  @-webkit-keyframes moveLeft {
+    0% {
+      transform: translateX(26px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes moveLeft {
+    0% {
+      transform: translateX(26px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }

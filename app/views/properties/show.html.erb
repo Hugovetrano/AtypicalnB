@@ -1,7 +1,7 @@
 <div class="container">
   <div class="">
     <div div class="home-offer-card ">
-        <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
+        <%= cl_image_tag @property.photos[0].key, class:"home-offer-card-img"%>
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
                 <h3 class="home-offer-card-infos-name"><%= @property.name %></h3>

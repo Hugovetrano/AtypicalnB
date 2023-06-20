@@ -21,8 +21,11 @@
 <div class="My Properties">
   <h3>My Properties</h3>
 
-<%= Property.where(user_id: current_user.id).limit(3) %>
-
+<ol>
+<% Property.where(user_id: current_user.id).each do |property| %>
+  <li><%= property.name %></li>
+  <% end %>
+</ul>
 </div>
 
 

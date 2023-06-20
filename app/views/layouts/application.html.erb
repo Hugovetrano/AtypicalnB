@@ -12,11 +12,10 @@
 
   <body>
     <%= render 'partials/header' %>
+    <%= render "shared/flashes" %>
     <div class="yield-container">
     <%= yield %>
     </div>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render 'partials/footer' %>
   </body>
 </html>

@@ -8,7 +8,11 @@ class BookingsController < ApplicationController
     @booking.user_id = current_user.id
     @booking.property_id = params[:property_id]
     if @booking.save
+      flash[:notice] = "Booking created successfully."
       redirect_to bookings_path
+    else
+      flash[:alert] = "Failed to create booking."
+      render :new
     end
   end
 

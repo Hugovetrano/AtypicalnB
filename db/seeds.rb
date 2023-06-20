@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+properties = Property.all
+
+properties.each do |p|
+    p.rating = rand(1..5)
+    p.save
+end

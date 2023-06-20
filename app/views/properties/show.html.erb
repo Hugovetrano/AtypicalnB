@@ -18,10 +18,10 @@
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
         <%= f.input :start_date,
                     as: :string,
-                    input_html: { placeholder: 'Start date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", minDate: "today", controller: "datepicker" } } %>
+                    input_html: { placeholder: 'Start date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", controller: "datepicker" } } %>
         <%= f.input :end_date,
                     as: :string,
-                    input_html: { placeholder: 'End date', data: { alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d", minDate: "06.20.2023", controller: "datepicker" } } %>
+                    input_html: { placeholder: 'End date', data: { minDate: "2023-06-23", alt_input: true, alt_format: "F j, Y", date_format: "Y-m-d",  controller: "datepicker" } } %>
         <%= f.submit %>
       <% end %>
     </div>

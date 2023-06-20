@@ -6,7 +6,8 @@
       <li><%=  %><%= link_to 'Home', root_path %></li>
       <li><%= link_to 'Properties', properties_path %></li>
       <li><%= link_to 'My offers', owner_properties_path %></li>
-      <li><%= link_to 'Profil', root_path %></li>
+      <%# root_path %>
+      <li><%= link_to 'Profil', user_path(current_user) %></li>
       <% if user_signed_in? %>
         <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete} %></li>
       <% else %>

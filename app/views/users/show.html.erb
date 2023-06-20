@@ -1,0 +1,33 @@
+<div class="container-profile">
+  <div class="profile-presentation">
+    <h2> Presentation</h2>
+    <img src="app/assets/images/profile_current_user.jpg" alt="current_user">
+    <div>
+      <%= current_user.first_name %>
+      <%= current_user.last_name %>
+      <%= current_user.overview %>
+    </div>
+  </div>
+
+  <div class="profile-contact">
+    <h3>Contact</h3>
+    <%= current_user.email %>
+    <%= current_user.phone_number %>
+  </div>
+
+  <%= link_to "Update Profile" %>
+
+
+<div class="My Properties">
+
+</div>
+
+<div class="My Bookings">
+
+</div>
+
+
+
+
+
+</div>

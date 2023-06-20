@@ -126,11 +126,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
-<<<<<<< HEAD
-  # config.pepper = '34118f22a25f0d88b9d1fa31e107e9ed9d1c3ffb17716d1f6daf67289623efcd2c150989793c5103254f7d2db7bc80ab32bce7a97957943b5e24378068b203bd'
-=======
   # config.pepper = '473a3ea0039ff1652d01cdbe69bf98f6dcc9b63da7b3eb8275f042ee686117dc7444a80e194ff962f050dbcad8b2f4e63fdb585749e1779f14cf944409293636'
->>>>>>> 3e948585591b7579d6217122dc15d3dfa68c22bd
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -267,11 +263,7 @@ Devise.setup do |config|
   # should add them to the navigational formats lists.
   #
   # The "*/*" below is required to match Internet Explorer requests.
-<<<<<<< HEAD
-  # config.navigational_formats = ['*/*', :html, :turbo_stream]
-=======
   config.navigational_formats = ['*/*', :html, :turbo_stream]
->>>>>>> 3e948585591b7579d6217122dc15d3dfa68c22bd
 
   # The default HTTP method used to sign out a resource. Default is :delete.
   config.sign_out_via = :delete

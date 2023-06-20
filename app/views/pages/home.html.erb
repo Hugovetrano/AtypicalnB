@@ -6,106 +6,24 @@
 
 <h2 class="w-100 text-center sec-color">Our best sellers.</h2>
 
-<%# <% xxxxx.each do |xxx| %>
-
-<%# THE SEVEN DIVS SHOULD BE REPLACED BY ONE DIV BETWEEN A EACH ITERATION %>
+<% @properties.each do |property| %>
 
 <div class="home-offer-card">
-        <%= cl_image_tag("octopushouse") %>
+       <img src="https://i.ibb.co/WysZ7CC/image.png" alt="<%= property.name %>" class="home-offer-card-img">
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Ocotopus House</h3>
-                <p class="home-offer-card-infos-description">Embrace the whimsical charm of the Octopus House, a uniquely designed venue that transports you to an underwater wonderland. With its vibrant colors and tentacle-inspired architecture, it offers an unforgettable setting for a truly extraordinary event.</p>
+                <p class="property-rating-stars">
+                <% property.rating.times do %>
+                    ★
+                <% end %>
+                </p>
+                <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
+                <p class="home-offer-card-infos-description"><%= property.overview %></p>
             </div>
             <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
+                <p class="home-offer-card-price"><strong>$<%= property.price_per_night %></strong> / Night</p>
+                <%= link_to 'Book Now!', property_path(property), class: "home-offer-card-cta" %>
             </div>
         </div>
     </div>
-
-    <div class="home-offer-card">
-        <%= cl_image_tag("rockhouse") %>
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Rock house</h3>
-                <p class="home-offer-card-infos-description">Rock the night away at the Rockhouse, a dynamic venue that amplifies your event’s energy. With its edgy atmosphere and state-of-the-art sound system, it’s the ultimate destination for music enthusiasts and unforgettable celebrations.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <%= cl_image_tag("helllakehouse") %>
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Hell Lake House</h3>
-                <p class="home-offer-card-infos-description">Embark on a daring journey at Hell Lake House, a hauntingly beautiful venue shrouded in mystery. With its dark allure and stunning lakefront views, it sets the stage for an unforgettable event that embraces the allure of the unknown.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <%= cl_image_tag("upsidedownhouse") %>
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Upside Down house</h3>
-                <p class="home-offer-card-infos-description">Turn your world upside down at the Upside Down House, a whimsical venue that defies gravity. Step into a surreal experience where floors become ceilings, and everything is delightfully topsy-turvy, creating a unique backdrop for an unforgettable event.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-        <div class="home-offer-card">
-        <%= cl_image_tag("firehouse") %>
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Fire house</h3>
-                <p class="home-offer-card-infos-description">Ignite your event at the Firehouse, where historic charm meets modern allure. Experience a captivating venue boasting exposed brick walls, high ceilings, and firefighting memorabilia, perfect for any occasion.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <%= cl_image_tag("icehouse") %>
-        <div class="home-offer-card-infos">
-            <div class="home-offer-card-infos-left">
-                <h3 class="home-offer-card-infos-name">Ice house</h3>
-                <p class="home-offer-card-infos-description">Chill out in style at the Icehouse, an icy haven for unforgettable events. With its sleek architecture and frosty ambiance, it’s the perfect venue to cool down and create lasting memories.</p>
-            </div>
-            <div class="home-offer-card-infos-right">
-                <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-                <a href="" class="home-offer-card-cta">Book now !</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="home-offer-card">
-        <%= cl_image_tag("sandhouse") %>
-        <div class="home-offer-card-infos">
-        <div class="home-offer-card-infos-left">
-            <h3 class="home-offer-card-infos-name">Sand house</h3>
-            <p class="home-offer-card-infos-description">Escape to the Sandhouse, a serene oasis by the shore for your dream event. With its beach-inspired decor and tranquil ambiance, it offers a perfect setting to unwind and create lasting memories on the sandy shores.</p>
-        </div>
-        <div class="home-offer-card-infos-right">
-            <p class="home-offer-card-price"><strong>$299</strong> / Night</p>
-            <a href="" class="home-offer-card-cta">Book now !</a>
-        </div>
-    </div>
-    </div>
-
-<%# <% end %>
+<% end %>

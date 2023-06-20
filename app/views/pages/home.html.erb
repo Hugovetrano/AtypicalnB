@@ -9,7 +9,7 @@
 <% @properties.each do |property| %>
 
 <div class="home-offer-card">
-       <img src="https://i.ibb.co/WysZ7CC/image.png" alt="<%= property.name %>" class="home-offer-card-img">
+       <%= cl_image_tag property.photo.key, class:"home-offer-card-img"%>
         <div class="home-offer-card-infos">
             <div class="home-offer-card-infos-left">
                 <p class="property-rating-stars">

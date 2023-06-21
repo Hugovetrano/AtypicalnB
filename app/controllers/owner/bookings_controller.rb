@@ -3,7 +3,8 @@ class Owner::BookingsController < ApplicationController
   before_action :set_booking, only: [:accept, :refuse]
 
   def index
-    @bookings = Booking.where(user_id: current_user.id)
+    @properties = Property.where(user_id: current_user.id)
+    @bookings = Booking.where(property_id: @properties.ids)
   end
 
   def accept

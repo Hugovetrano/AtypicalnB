@@ -1,5 +1,9 @@
 class PropertiesController < ApplicationController
+<<<<<<< HEAD
   before_action :check_owner_mode, except: %i[new create destroy]
+=======
+  before_action :check_owner_mode, except: [:new, :create, :destroy]
+>>>>>>> ddb2ab2e65b496050e6a9f6be2d338cef942502a
   before_action :set_flat, only: [:show, :update, :destroy]
 
   def index

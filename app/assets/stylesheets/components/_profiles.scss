@@ -1,21 +1,26 @@
 @import 'variables';
 
+.container-profile {
+  width: 800px;
+  display: flex;
+  align-items:flex-start;
+  flex-grow: 1;
+  margin-top: 70px;
+}
 
-// * {
-//   margin: 0;
-//   padding: 0
-// }
+.star {
+  color: $thi-color;
+}
 
-// body {
-//   background-color: #000
-// }
-
-.card {
+.profile {
   width: 350px;
   background-color: #efefef;
   border: none;
   cursor: pointer;
   transition: all 0.5s;
+  position: fixed;
+  // z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .image img {
@@ -55,7 +60,7 @@
 
 .links-users {
   text-decoration: none;
-  color: #98DFD6;
+  color: $fou-color;
 }
 
 

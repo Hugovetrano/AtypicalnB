@@ -1,10 +1,10 @@
 <div class="container-profile">
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
-    <div class="card p-4">
+    <div class="profile p-4">
       <div class="image d-flex flex-column justify-content-center align-items-center">
-        <img src="https://res.cloudinary.com/wagon/image/upload/c_fill,g_face,h_200,w_200/v1683229854/gcuc6muq1e3dbrtbb2ex.jpg" class="avatar" />
+        <%= cl_image_tag current_user.photo.key, class: "avatar" %>
         <p class="name mt-3"><%= current_user.first_name %> <%= current_user.last_name %></p>
-        <p class="name">Rating host: 5 <i class="fa-solid fa-star" style="color: #F1C27B;"></i></p>
+        <p class="name">Rating host: 5 <span class="star">★</span></p>
         <p class="idd"><%= current_user.email %></p>
         <p class="idd">Phone: <%= current_user.phone_number %></p>
         <div class="d-flex flex-row justify-content-center align-items-center">
@@ -23,25 +23,27 @@
     </div>
   </div>
 
-  <div>
-    <% @revenue = 0 %>
-    <% Property.where(user_id: current_user.id).each do |property| %>
-      <% property.bookings.each do |booking| %>
-        <% @revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
-      <% end %>
-    <% end %>
-    <h3>My revenue</h3>
-    <p class="revenue">Total: <span id="revenue">+<%= @revenue %>€</span></p>
-
-    <ul class="list-group list-group-flush w-75">
+  <div class="global-revenues">
+    <div class="container mt-4 mb-4 p-3 revenue">
+      <% @revenue = 0 %>
       <% Property.where(user_id: current_user.id).each do |property| %>
         <% property.bookings.each do |booking| %>
-          <li class="list-group-item d-flex justify-content-between align-items-center">
-            <span><span class="text-secondary me-3"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></span> <%= booking.user.first_name %> <%= booking.user.last_name %></span>
-            <span class="badge bg-success rounded-pill">+<%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>€</span>
-          </li>
+          <% @revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
         <% end %>
       <% end %>
-    </ul>
+      <h3>My revenue</h3>
+      <p>Total: <span id="revenue">+<%= @revenue %>€</span></p>
+
+      <ul class="list-group list-group-flush w-75">
+        <% Property.where(user_id: current_user.id).each do |property| %>
+          <% property.bookings.each do |booking| %>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <span><span class="text-secondary me-3"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></span> <%= booking.user.first_name %> <%= booking.user.last_name %></span>
+              <span class="badge bg-success rounded-pill">+<%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>€</span>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </div>

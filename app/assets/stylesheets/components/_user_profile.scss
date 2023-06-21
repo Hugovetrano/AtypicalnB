@@ -1,5 +1,14 @@
+.global-revenues {
+  width:100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
 .revenue {
-  font-size: 20px;
+  font-size: 22px;
+
+  h3 {
+    font-weight: bold;
+  }
 }
 #revenue {
   font-size: 30px;

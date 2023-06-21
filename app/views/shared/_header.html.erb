@@ -1,57 +1,48 @@
 <header>
-    <div class="header-container">
-
-      <% if current_user %>
-        <% if current_user.owner_mode %>
-          <div>
-            <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
-          </div>
-          <div class="switch-container">
-            <p class="owner-mode-on">Owner</p>
-              <label class="switch mode_on" data-controller="owner-mode" data-owner-mode-target="container">
-                <input type="checkbox">
-                <span class="slider round" data-action="click->owner-mode#toggle"></span>
-              </label>
-            <p class="white">Renter</p>
-          </div>
-
-          <ul class="">
-            <li><%=  %><%= link_to 'Home', root_path, class: "owner-mode-on" %></li>
-            <li><%= link_to 'My Properties', owner_properties_path, class: "owner-mode-on" %></li>
-            <li><%= link_to 'My Next Guests', owner_bookings_path, class: "owner-mode-on" %></li>
-            <li><%= link_to 'Profile', user_path(current_user), class: "owner-mode-on" %></li>
-            <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "owner-mode-on" %></li>
-        <% else %>
-          <div>
-            <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
-          </div>
-          <div class="switch-container">
-            <p class="owner-mode-off white">Owner</p>
-            <label class="switch mode_off" data-controller="owner-mode" data-owner-mode-target="container">
-              <input type="checkbox">
-              <span class="slider round" data-action="click->owner-mode#toggle"></span>
-            </label>
-          <p class="">Renter</p>
-          </div>
-
-          <ul class="">
-            <li><%=  %><%= link_to 'Home', root_path%></li>
-            <li><%= link_to 'Our experiences', properties_path%></li>
-            <li><%= link_to 'My Reservations', bookings_path%></li>
-            <li><%= link_to 'Profile', user_path(current_user)%></li>
-            <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}%></li>
-        <% end %>
-      <% else %>
-        <div>
-          <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
-        </div>
-        <ul>
-          <li><%=  %><%= link_to 'Home', root_path %></li>
-          <li><%= link_to 'Properties', properties_path %></li>
-          <li><%= link_to 'Register', new_user_registration_path %></li>
-          <li><%= link_to 'Login', new_user_session_path %></li>
-        </ul>
-      <% end %>
-
+  <% if current_user&.owner_mode %>
+    <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="150"></a>
+    <ul class="header-menu-container">
+      <li><%= link_to 'My Properties', owner_properties_path, class: "owner-mode-on" %></li>
+      <div class="switch-container">
+        <p class="owner-mode-on text-center">Owner</p>
+          <label class="switch mode_on" data-controller="owner-mode" data-owner-mode-target="container">
+            <input type="checkbox">
+            <span class="slider round" data-action="click->owner-mode#toggle"></span>
+          </label>
+        <p class="white text-center my-0">Renter</p>
+      </div>
+      <li><%= link_to 'My Next Guests', owner_bookings_path, class: "owner-mode-on" %></li>
+    </ul>
+    <div class="header-small-links-container">
+      <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "header-small-links" %>
+      <%= link_to 'Profile', user_path(current_user), class: "header-small-links" %>
     </div>
+  <% elsif current_user&.owner_mode == false %>
+    <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="150"></a>
+    <ul class="header-menu-container">
+      <li><%= link_to 'Our experiences', properties_path%></li>
+      <div class="switch-container">
+        <p class="owner-mode-off white text-center">Owner</p>
+          <label class="switch mode_off" data-controller="owner-mode" data-owner-mode-target="container">
+            <input type="checkbox">
+            <span class="slider round" data-action="click->owner-mode#toggle"></span>
+          </label>
+        <p class="text-center my-0">Renter</p>
+      </div>
+      <li><%= link_to 'My Reservations', bookings_path%></li>  
+    </ul>
+    <div class="header-small-links-container">
+      <%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "header-small-links" %>
+      <%= link_to 'Profile', user_path(current_user), class: "header-small-links" %>
+    </div>
+  <% else %>
+    <div class="header-logo-container">
+      <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="150"></a>
+    </div>
+    <ul class="header-menu-container">
+      <li><%= link_to 'Our experiences', properties_path%></li>
+      <li><%= link_to 'Register', new_user_registration_path %></li>
+      <li><%= link_to 'Login', new_user_session_path%></li>
+    </ul>
+  <% end %>
 </header>

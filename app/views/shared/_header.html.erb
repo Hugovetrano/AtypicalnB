@@ -5,13 +5,15 @@
         <% if current_user.owner_mode %>
           <div>
             <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Logo" width="350"></a>
-            <p class="owner-mode-on">Owner</p>
           </div>
-
-          <label class="switch mode_on" data-controller="owner-mode" data-owner-mode-target="container">
-            <input type="checkbox">
-            <span class="slider round" data-action="click->owner-mode#toggle"></span>
-          </label>
+          <div class="switch-container">
+            <p class="owner-mode-on">Owner</p>
+              <label class="switch mode_on" data-controller="owner-mode" data-owner-mode-target="container">
+                <input type="checkbox">
+                <span class="slider round" data-action="click->owner-mode#toggle"></span>
+              </label>
+            <p class="white">Renter</p>
+          </div>
 
           <ul class="">
             <li><%=  %><%= link_to 'Home', root_path, class: "owner-mode-on" %></li>
@@ -22,13 +24,15 @@
         <% else %>
           <div>
             <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Logo" width="350"></a>
-            <p>Renter</p>
           </div>
-
-          <label class="switch mode_off" data-controller="owner-mode" data-owner-mode-target="container">
-            <input type="checkbox">
-            <span class="slider round" data-action="click->owner-mode#toggle"></span>
-          </label>
+          <div class="switch-container">
+            <p class="owner-mode-off white">Owner</p>
+            <label class="switch mode_off" data-controller="owner-mode" data-owner-mode-target="container">
+              <input type="checkbox">
+              <span class="slider round" data-action="click->owner-mode#toggle"></span>
+            </label>
+          <p class="">Renter</p>
+          </div>
 
           <ul class="">
             <li><%=  %><%= link_to 'Home', root_path%></li>

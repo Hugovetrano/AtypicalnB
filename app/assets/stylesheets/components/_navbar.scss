@@ -79,7 +79,21 @@ header {
     }
   }
 
+  .switch-container {
+    position: absolute;
+    left: 25px;
+    top: 10px;
+  }
+
   .owner-mode-on {
     color: $fif-color;
+    margin-bottom: 0;
+  }
+  .owner-mode-off {
+    color: $fif-color;
+    margin-bottom: 0;
+  }
+  .white {
+    color: rgba(170, 170, 170, 0.5);
   }
 }

@@ -16,15 +16,19 @@
     }
 
     img {
-        // -------------------- The illustration of the offer 
+        // -------------------- The illustration of the offer
         height: 300px;
         object-fit: cover;
         width: auto;
     }
-    
+
     .property-rating-stars {
         font-size: 1.5rem;
         color: $thi-color;
+    }
+
+    p {
+        margin-bottom: 0;
     }
 }
 
@@ -46,6 +50,7 @@
     width: 30%;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
     gap: 15px;
 }
 
@@ -71,16 +76,16 @@
 
     border-radius: 7px;
 
-    padding: 11px 11px;
+    padding: 5px 11px;
 
     text-decoration: none;
     //text-underline-offset: 30px;
     //text-decoration-thickness: 2px;
-    
+
     overflow: hidden;
 
     transition: ease .2s;
-    
+
     &:hover {// -------------------- Colors and underline effects at CTA's hover
         color: $pri-color;
         background-color: $thi-color;
@@ -114,7 +119,7 @@
     .home-offer-card-cta {
         // -------------------- CTA of the offer
         width: 45%;
-        padding: 16px;
+        padding: 10px;
     }
 }
 
@@ -142,6 +147,6 @@
     .home-offer-card-cta {
         // -------------------- CTA of the offer
         width: 75%;
-        padding: 16px;
+        padding: 10px;
     }
 }

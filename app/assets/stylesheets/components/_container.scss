@@ -1,0 +1,58 @@
+/* ---------- MAIN CONTAINER ---------- */
+
+@media screen and (min-width: 200px) and (max-width: 640px) {
+  .owner-main-container {
+    width: 90%;
+  }
+}
+.owner-main-container {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  margin: 0px;
+}
+
+.owner-choice-container {
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+.owner-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-items: space-around;
+  gap: 10px;
+  width: 100%;
+}
+@media screen and (max-width: 900px){
+  .owner-main-container {
+    width: 95%;
+  }
+}
+
+/* ---------- ATTRIBUTES ---------- */
+/*
+.flex-row {
+  display: flex;
+}
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+.flex-sp-ev {
+  justify-content: space-evenly;
+}
+.flex-sp-be {
+  justify-content: space-between;
+}
+.flex-sp-ar {
+  justify-content: space-around;
+} */
+
+
+.container-profile {
+  width: 80%;
+}

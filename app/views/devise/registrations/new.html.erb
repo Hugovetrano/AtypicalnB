@@ -4,6 +4,8 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
+    <%= f.input :photo, as: :file,
+                 required: false %>
     <%= f.input :first_name,
                 required: true,
                 autofocus: true,

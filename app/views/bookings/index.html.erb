@@ -1,6 +1,6 @@
-<%= @bookings.each do |booking| %>
+<% @bookings.each do |booking| %>
   <div class="home-offer-card ">
-      <img src="https://i.ibb.co/JcJqyQM/image.png" alt="The villa picture" class="home-offer-card-img">
+      <%= cl_image_tag booking.property.photos[0].key, class:"home-offer-card-img"%>
       <div class="home-offer-card-infos">
           <div class="home-offer-card-infos-left">
               <h3 class="home-offer-card-infos-name"><%= booking.property.name %></h3>
@@ -8,7 +8,14 @@
           </div>
           <div class="home-offer-card-infos-right">
               <p class="home-offer-card-price">Total : <strong><%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %></strong>€ </p>
-              <a link_to, property_path class="home-offer-card-cta">Edit</a>
+              <% if booking.accepted %>
+                <span class="badge rounded-pill bg-success">Accepted</span>
+              <% elsif booking.accepted == false %>
+                <span class="badge rounded-pill bg-danger">Refused</span>
+              <% else %>
+                <span class="badge rounded-pill bg-warning">Pending...</span>
+              <% end %>
+              <%# <a link_to, property_path class="home-offer-card-cta">Edit</a> %>
           </div>
       </div>
   </div>

@@ -34,7 +34,7 @@ class Owner::BookingsController < ApplicationController
 
   def check_owner_mode
     unless current_user.owner_mode
-      redirect_to root_path
+      redirect_to bookings_path
     end
   end
 end

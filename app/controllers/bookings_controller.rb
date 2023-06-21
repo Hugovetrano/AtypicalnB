@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :check_owner_mode
 
   def index
     @bookings = Booking.where(user_id: current_user.id)
@@ -21,5 +22,11 @@ class BookingsController < ApplicationController
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :property_id, photos: [])
+  end
+
+  def check_owner_mode
+    if current_user.owner_mode
+      redirect_to owner_bookings_path
+    end
   end
 end

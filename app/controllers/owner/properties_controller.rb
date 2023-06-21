@@ -29,7 +29,7 @@ class Owner::PropertiesController < ApplicationController
 
   def check_owner_mode
     unless current_user.owner_mode
-      redirect_to root_path
+      redirect_to properties_path
     end
   end
 end

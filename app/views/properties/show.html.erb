@@ -1,5 +1,4 @@
-<div class="container">
-  <div class="">
+  <div class="properties-show-container" data-controller="set-total-price">
     <div div class="home-offer-card ">
       <%= cl_image_tag @property.photos[0].key, class:"home-offer-card-img"%>
       <div class="home-offer-card-infos">
@@ -23,16 +22,15 @@
     <%# ------------------------------------ %>
 
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
-        <label for="">Select your desired dates</label>
-        <input type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value= <%= array.to_json %>>
+        <label class="sec-color new-booking-label" for="">Tell us when :</label>
+        <input data-action="change->set-total-price#updatePrice" data-set-total-price-input class="new-booking-date-input" type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value= <%= array.to_json %>>
         <%= f.input :start_date,
                     as: :hidden,
                     input_html: { id: "start_date"} %>
         <%= f.input :end_date,
                     as: :hidden,
                     input_html: { id: "end_date" } %>
-        <%= f.submit %>
+        <%= f.submit 'Book my dream', class: "new-booking-cta" %>
       <% end %>
     </div>
   </div>
-</div>

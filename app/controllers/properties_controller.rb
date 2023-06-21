@@ -1,5 +1,6 @@
 class PropertiesController < ApplicationController
-  before_action :set_flat, only: [:show, :update,  :destroy]
+  before_action :check_owner_mode
+  before_action :set_flat, only: [:show, :update, :destroy]
 
   def index
     @properties = Property.all
@@ -45,5 +46,11 @@ class PropertiesController < ApplicationController
 
   def property_params
     params.require(:property).permit(:name, :address, :city, :zipcode, :overview, :rating, :price_per_night, :guest_capacity, photos: [])
+  end
+
+  def check_owner_mode
+    if current_user.owner_mode
+      redirect_to owner_properties_path
+    end
   end
 end

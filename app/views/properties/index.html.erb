@@ -11,7 +11,7 @@
                 </p>
                 <% end %>
             <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
-            <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ') %><%= link_to ' read more', property_path(property) %></p>
+            <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ') %><%= link_to ' ...', property_path(property), class: "sec-color" %></p>
         </div>
         <div class="home-offer-card-infos-right">
             <p class="home-offer-card-price"><strong><%= property.price_per_night %></strong>€ / Night</p>

@@ -9,7 +9,7 @@
                     ★
                 <% end %>
                 </p>
-                <% end %> 
+                <% end %>
             <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
             <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ') %><%= link_to ' read more', property_path(property) %></p>
         </div>
@@ -22,6 +22,6 @@
 <% end %>
 <% if current_user.owner_mode %>
     <div class="w-100 justify-content-center d-flex">
-    <%= link_to "Add your own property", new_property_path, class: "home-offer-card-cta" %>
+    <%= link_to "Add a property", new_property_path, class: "home-offer-card-cta" %>
     </div>
 <% end %>

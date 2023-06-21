@@ -1,5 +1,5 @@
 class PropertiesController < ApplicationController
-  before_action :set_flat, only: [:show, :update, :destroy]
+  before_action :set_flat, only: [:show, :update,  :destroy]
 
   def index
     @properties = Property.all
@@ -22,6 +22,19 @@ class PropertiesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def update
+    if @property.update(property_params)
+      redirect_to owner_properties_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
+  def destroy
+    @property.destroy
+    redirect_to properties_path, status: :see_other
   end
 
   private

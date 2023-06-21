@@ -4,7 +4,7 @@
       <% if current_user %>
         <% if current_user.owner_mode %>
           <div>
-            <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Logo" width="350"></a>
+            <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
           </div>
           <div class="switch-container">
             <p class="owner-mode-on">Owner</p>
@@ -23,7 +23,7 @@
             <li><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "owner-mode-on" %></li>
         <% else %>
           <div>
-            <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Logo" width="350"></a>
+            <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
           </div>
           <div class="switch-container">
             <p class="owner-mode-off white">Owner</p>
@@ -43,7 +43,7 @@
         <% end %>
       <% else %>
         <div>
-          <a href="/"><img src="https://i.ibb.co/j8YzQyy/Test-logo-2.png" alt="Logo" width="350"></a>
+          <a href="/"><img src="https://i.ibb.co/mDsg2HP/test-logo-720.png" alt="Logo" width="250"></a>
         </div>
         <ul>
           <li><%=  %><%= link_to 'Home', root_path %></li>

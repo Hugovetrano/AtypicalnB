@@ -1,0 +1,11 @@
+<%= simple_form_for(@property) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :city %>
+  <%= f.input :zipcode %>
+  <%= f.input :overview %>
+  <%= f.input :guest_capacity %>
+  <%= f.input :price_per_night %>
+  <%= f.input :photos %>
+  <span class="submit-container"><%= f.submit %></span>
+<% end %>

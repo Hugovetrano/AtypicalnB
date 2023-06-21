@@ -1,0 +1,57 @@
+@import 'variables';
+
+.properties-show-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 55px;
+
+}
+
+.flatpickr-month,
+.flatpickr-next-month>svg path {
+    background-color: $sec-color !important;
+    color: $pri-color !important;
+    fill: white !important;
+}
+
+.flatpickr-calendar {
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+.simple_form.new_booking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.new-booking-label {
+    font-size: 18px;
+}
+
+.new-booking-date-input {
+    margin-top: 15px;
+    text-align: center;
+    width: 300px;
+}
+
+.new-booking-cta {
+    border: 2px $sec-color solid;
+    color: $sec-color;
+    background-color: $pri-color;
+    border-radius: 15px;
+    font-size: 1.3rem;
+    padding: 10px 15px;
+
+    transition: .2s ease;
+
+    &:hover {
+        border: 2px $sec-color solid;
+        color: $pri-color;
+        background-color: $sec-color;
+        border-radius: 15px;
+        font-size: 1.3rem;
+        padding: 10px 15px;
+    }
+}

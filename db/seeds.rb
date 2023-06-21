@@ -11,7 +11,7 @@ require "json"
 Property.destroy_all
 
 
-@user_id = 1
+@user_id = 2
 file = File.open("db/image/firehouse.jpg")
 property = Property.new(
 name: "Fire house",
@@ -28,7 +28,6 @@ property.photos.attach(io: file, filename: "firehouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/icehouse.jpg")
 property = Property.new(
 name: "Ice house",
@@ -45,7 +44,6 @@ property.photos.attach(io: file, filename: "icehouse", content_type: "image/png"
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/rockhouse.png")
 property = Property.new(
 name: "Rock house",
@@ -62,7 +60,6 @@ property.photos.attach(io: file, filename: "rockhouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/upsidedownhouse.png")
 property = Property.new(
 name: "Upside Down house",
@@ -79,7 +76,6 @@ property.photos.attach(io: file, filename: "upsidedownhouse", content_type: "ima
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/helllakehouse.jpg")
 property = Property.new(
 name: "Hell Lake house",
@@ -96,7 +92,6 @@ property.photos.attach(io: file, filename: "helllakehouse", content_type: "image
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/sandhouse.jpg")
 property = Property.new(
 name: "Sand house",
@@ -113,7 +108,6 @@ property.photos.attach(io: file, filename: "sandhouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/octopushouse.png")
 property = Property.new(
 name: "Octopus house",
@@ -130,7 +124,6 @@ property.photos.attach(io: file, filename: "octopushouse", content_type: "image/
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/militaryhouse.png")
 property = Property.new(
 name: "Military house",
@@ -147,7 +140,6 @@ property.photos.attach(io: file, filename: "militaryhouse", content_type: "image
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/taiwanhouse.png")
 property = Property.new(
 name: "Taiwan house",
@@ -164,7 +156,6 @@ property.photos.attach(io: file, filename: "Taiwanhouse", content_type: "image/p
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/metalhouse.png")
 property = Property.new(
 name: "Metal house",
@@ -181,7 +172,6 @@ property.photos.attach(io: file, filename: "Metalhouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/weirdhouse.png")
 property = Property.new(
 name: "Weird house",
@@ -198,7 +188,6 @@ property.photos.attach(io: file, filename: "Weirdhouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/treehouse.png")
 property = Property.new(
 name: "Tree house",
@@ -215,7 +204,6 @@ property.photos.attach(io: file, filename: "Treehouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/greenhouse.png")
 property = Property.new(
 name: "Green house",
@@ -232,7 +220,6 @@ property.photos.attach(io: file, filename: "Greenhouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/woodhouse.png")
 property = Property.new(
 name: "Wood house",
@@ -249,7 +236,6 @@ property.photos.attach(io: file, filename: "Woodhouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/darkforesthouse.png")
 property = Property.new(
 name: "Dark Forest house",
@@ -266,7 +252,6 @@ property.photos.attach(io: file, filename: "DarkForesthouse", content_type: "ima
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/gianthouse.png")
 property = Property.new(
 name: "Giant house",
@@ -283,7 +268,6 @@ property.photos.attach(io: file, filename: "Gianthouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/strangehouse.png")
 property = Property.new(
 name: "Strange house",
@@ -300,7 +284,6 @@ property.photos.attach(io: file, filename: "Strangehouse", content_type: "image/
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/airhouse.png")
 property = Property.new(
 name: "Air house",
@@ -317,7 +300,6 @@ property.photos.attach(io: file, filename: "Airhouse", content_type: "image/png"
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/stonehouse.png")
 property = Property.new(
 name: "Stone house",
@@ -334,7 +316,6 @@ property.photos.attach(io: file, filename: "Stonehouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/santaclaushouse.png")
 property = Property.new(
 name: "Santa Claus house",
@@ -352,7 +333,6 @@ property.photos.attach(io: file, filename: "Santaclaushouse", content_type: "ima
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/levitatehouse.png")
 property = Property.new(
 name: "Levitate house",
@@ -369,7 +349,6 @@ property.photos.attach(io: file, filename: "Levitatehouse", content_type: "image
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/shoehouse.png")
 property = Property.new(
 name: "Shoe house",
@@ -386,7 +365,6 @@ property.photos.attach(io: file, filename: "Shoehouse", content_type: "image/png
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/lighthouse.png")
 property = Property.new(
 name: "Light house",
@@ -403,7 +381,6 @@ property.photos.attach(io: file, filename: "Lighthouse", content_type: "image/pn
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/isolatehouse.jpg")
 property = Property.new(
 name: "Isolate house",
@@ -420,7 +397,6 @@ property.photos.attach(io: file, filename: "Isolatehouse", content_type: "image/
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/pockethouse.jpg")
 property = Property.new(
 name: "Pocket house",
@@ -437,7 +413,6 @@ property.photos.attach(io: file, filename: "Pockethouse", content_type: "image/p
 property.save!
 
 
-@user_id = 1
 file = File.open("db/image/birdhouse.jpg")
 property = Property.new(
 name: "Bird house",

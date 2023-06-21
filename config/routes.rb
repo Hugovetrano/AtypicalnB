@@ -18,7 +18,7 @@ Rails.application.routes.draw do
         patch :refuse
       end
     end
-    resources :properties, only: [:index, :show, :update, :destroy]
+    resources :properties, only: [:index, :show, :edit, :update, :destroy]
   end
 
   resources :users, only: %i[show]

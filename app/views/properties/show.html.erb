@@ -12,7 +12,7 @@
             </div>
         </div>
     </div>
-
+<%# ---------Unavailable Dates---------- %>
     <div>
       <% array = [] %>
       <%@property.bookings.each do |booking|%>
@@ -22,7 +22,7 @@
       <% } %>
       <% end %>
     </div>
-    <div ></div>
+<%# ------------------------------------ %>
 
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
         <label for="">Select your desired dates</label>

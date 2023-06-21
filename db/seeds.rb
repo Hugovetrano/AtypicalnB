@@ -11,7 +11,7 @@ require "json"
 Property.destroy_all
 
 
-@user_id = 2
+@user_id = 1
 file = File.open("db/image/firehouse.jpg")
 property = Property.new(
 name: "Fire house",
@@ -91,7 +91,7 @@ user_id: @user_id
 property.photos.attach(io: file, filename: "helllakehouse", content_type: "image/png")
 property.save!
 
-
+@user_id = 2
 file = File.open("db/image/sandhouse.jpg")
 property = Property.new(
 name: "Sand house",

@@ -241,7 +241,7 @@ city: "WoodCity",
 zipcode: "55500",
 overview: "Experience rustic elegance at the Wood House, a cozy haven nestled amidst nature's embrace. With its warm wooden interiors and serene surroundings, it offers a charming setting for an intimate event that celebrates the beauty of natural craftsmanship.",
 rating: 1,
-price_per_night: 949,
+price_per_night: 249,
 guest_capacity: 1,
 user_id: @user_id
 )
@@ -361,7 +361,7 @@ city: "LevitateCity",
 zipcode: "84200",
 overview: "Defy gravity at the Levitate House, a gravity-defying haven where the impossible becomes possible. With its mind-bending architecture and ethereal ambiance, it offers a truly extraordinary setting for an event that transcends the boundaries of imagination.",
 rating: 1,
-price_per_night: 249,
+price_per_night: 949,
 guest_capacity: 1,
 user_id: @user_id
 )
@@ -400,24 +400,6 @@ guest_capacity: 1,
 user_id: @user_id
 )
 property.photos.attach(io: file, filename: "Lighthouse", content_type: "image/png")
-property.save!
-
-
-@user_id = 1
-file = File.open("db/image/isolatehouse.jpg")
-property = Property.new(
-name: "Isolate house",
-address: "000 Isolate Road",
-city: "IsolateCity",
-zipcode: "00000",
-overview: "Escape to the Isolate House, a secluded sanctuary where serenity and solitude intertwine. With its tranquil surroundings and exclusive atmosphere, it provides a private retreat for an intimate event that embraces the beauty of seclusion.
-",
-rating: 1,
-price_per_night: 19,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Isolatehouse", content_type: "image/png")
 property.save!
 
 
@@ -470,6 +452,7 @@ user_id: @user_id
 )
 property.photos.attach(io: file, filename: "Birdhouse", content_type: "image/png")
 property.save!
+
 
 
 properties = Property.all

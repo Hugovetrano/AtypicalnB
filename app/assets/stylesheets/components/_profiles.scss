@@ -1,6 +1,6 @@
 @import 'variables';
 
-.container-profile {
+.container-global {
   width: 800px;
   display: flex;
   align-items:flex-start;
@@ -23,21 +23,21 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
-.image img {
+.image-profile {
   transition: all 0.5s
 }
 
-.card:hover .image img {
+.image-profile:hover  {
   transform: scale(1.2)
 }
 
-.btn {
-  height: 80px;
-  width: 80px;
-  border-radius: 50%
-}
+// .btn {
+//   height: 80px;
+//   width: 80px;
+//   border-radius: 50%
+// }
 
-.name {
+.profile-name {
   font-size: 22px;
   font-weight: bold
 }
@@ -64,11 +64,11 @@
 }
 
 
-.text span {
-  font-size: 13px;
-  color: #545454;
-  font-weight: 500
-}
+// .text span {
+//   font-size: 13px;
+//   color: #545454;
+//   font-weight: 500
+// }
 
 
 .join {

@@ -23,12 +23,12 @@
   <div class="stat-div">
     <div class="occupancy-div">
       <h3>Revenue per property</h3>
-      <%= column_chart current_user.properties.group(:name).sum(:price_per_night) %>
+      <%= column_chart current_user.properties.group(:name).sum(:price_per_night), colors: ["#F1C27B", "#FFAB76"] %>
     </div>
 
     <div class="occupancy-div add-margin-to-cards">
       <h3>Occupancy</h3>
-      <%= line_chart current_user.bookings.group_by_day(:start_date).count %>
+      <%= line_chart current_user.bookings.group_by_day(:start_date).count, colors: ["#F1C27B", "#666"] %>
     </div>
   </div>
 

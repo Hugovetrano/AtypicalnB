@@ -1,3 +1,4 @@
+
 <div class="mapsearch little-back-plate">
   <div class="searchbar">
     <%= form_with url: properties_path, method: :get do %>
@@ -16,6 +17,7 @@
     data-map-markers-value="<%= @markers.to_json %>"
     data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
+
 </div>
 
 
@@ -45,3 +47,4 @@
     </div>
     <% end %>
 </div>
+

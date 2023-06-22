@@ -7,6 +7,7 @@
 
 <div class="container-global">
   <div class="profile-div">
+    <a href="<%= edit_user_path(current_user)%>" class="profile-edit-icon"><i class="fa-regular fa-pen-to-square fa-2xl"></i></a>
     <img src="https://res.cloudinary.com/dfuzqnyhu/image/upload/c_crop,h_565,w_565,x_0/v1686910297/samples/people/smiling-man.jpg" class="avatar-large-bordered">
     <p class="profile-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
     <p class="profile-email"><%= current_user.email %></p>
@@ -24,7 +25,8 @@
         <p class="profile-stat-number-title">Revenue</p>
       </li>
     </ul>
-    <%# <p class="profile-name">Rating host: 5 <span class="star">★</span></p> %>
+    <%# <p class="profile-overview"><%= current_user.overview %></p>
+    <%# <%= link_to "Update Profile", edit_user_path(current_user), class: "home-offer-card-cta" %>
 
   </div>
 </div>

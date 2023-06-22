@@ -1,0 +1,74 @@
+@import 'variables';
+
+.revenue-container-global {
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+
+.revenue-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 50px;
+  // z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: sticky; /* Set the position to sticky */
+  top: 155px; /* Adjust the value based on the height of your navbar */
+  z-index: 0;
+  h2 {
+    font-weight: bold;
+  }
+  height: fit-content;
+}
+.occupancy-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 30px;
+  padding-top: 50px;
+  // z-index: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.add-margin-to-cards {
+  margin-top: 15px;
+}
+
+.stat-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+}
+
+.global-revenues {
+  width:100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.revenue {
+  font-size: 22px;
+
+  h3 {
+    font-weight: bold;
+  }
+}
+#revenue {
+  font-size: 30px;
+  font-weight: 600;
+  color: $green;
+  margin-top: 10px;
+}

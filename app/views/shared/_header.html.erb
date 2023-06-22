@@ -9,8 +9,18 @@
           Settings
         </li>
         <ul class="dropdown-menu setting-menu" aria-labelledby="dropdownMenuButton1">
-          <li class="dropdown-item setting-menu"><%= link_to 'Profile', user_path(current_user), class: "header-small-links" %></li>
-          <li class="dropdown-item setting-menu"><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "home-offer-card-cta" %></li>
+          <%= link_to user_path(current_user) do %>
+          <li class="dropdown-item">
+            <div class="nav-dropdown-div">
+              <img src="https://res.cloudinary.com/dfuzqnyhu/image/upload/c_crop,h_565,w_565,x_0/v1686910297/samples/people/smiling-man.jpg" class="avatar-small">
+              <p class="nav-dropdown-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
+              <hr class="nav-separator-line">
+            </div>
+          </li>
+          <% end %>
+          <li class="dropdown-item setting-menu"><%= link_to 'View stats', revenue_path, class: "header-small-links" %></li>
+          <li class="dropdown-item setting-menu"><%= link_to 'Edit profile', user_path(current_user), class: "header-small-links" %></li>
+          <li class="dropdown-item setting-menu"><div class="nav-dropdown-div"><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar-logout-button" %></div></li>
         </ul>
       </div>
     </ul>

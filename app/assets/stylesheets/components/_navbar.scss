@@ -62,7 +62,7 @@ header {
       // -------------------- Header's menu items
       list-style-type: none;
       font-size: 1.6rem;
-      width: 210px;
+      text-align: center;
     }
   }
 
@@ -99,18 +99,71 @@ header {
   }
 
 
-.owner-mode-on.color-active,
-.color-active {
-  //----------------------- Header menu item color when page active
-  color: $thi-color;
-}
+  .owner-mode-on.color-active,
+  .color-active {
+    //----------------------- Header menu item color when page active
+    color: $thi-color;
+  }
 
-li.dropdown-toggle:hover {
-  color: $thi-color;
-}
+  li.dropdown-toggle:hover {
+    color: $thi-color;
+  }
 
-a.owner-mode-on:hover {
-      color :$fio-color;
+  a.owner-mode-on:hover {
+        color :$fio-color;
+      }
+
+  .nav-dropdown-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .nav-dropdown-name {
+    font-size: medium;
+  }
+
+  .setting-menu {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .nav-separator-line {
+    border-top: 1px solid rgb(190, 190, 190);
+    margin: 0px;
+    margin-top: 10px;
+    width: 80%;
+  }
+
+  .navbar-logout-button {
+    // -------------------- CTA of the offer
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    background-color: $sec-color;
+    color: $pri-color;
+
+    border-radius: 7px;
+
+    border: none;
+    width: 80%;
+    padding: 2px 6px;
+
+    text-decoration: none;
+    //text-underline-offset: 30px;
+    //text-decoration-thickness: 2px;
+
+    overflow: hidden;
+
+    transition: ease .2s;
+
+    &:hover {// -------------------- Colors and underline effects at CTA's hover
+        color: $pri-color;
+        background-color: $thi-color;
+        //text-underline-offset: 7px;
     }
-}
 
+}
+}

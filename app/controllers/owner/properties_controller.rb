@@ -11,6 +11,14 @@ class Owner::PropertiesController < ApplicationController
   def edit
   end
 
+  def update
+    if @property.update(property_params)
+      redirect_to owner_properties_path
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def set_property

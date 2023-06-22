@@ -4,12 +4,10 @@ class Property < ApplicationRecord
   belongs_to :user
 
   # --------------------Validators-----------------------------------
-  validates :name, :description, :address, :city, :price, presence: true
-  validates :price, :guest_capacity, numericality: { only_integer: true }
-  validates :price, :guest_capacity, numericality: { greater_than: 0 }
-  validates :name, uniqueness: true
-  validates :description, length: { minimum: 10 }
-  validates :photos, presence: true
+  validates :name, :overview, :address, :city, :zipcode, :price_per_night, :guest_capacity, presence: true
+  validates :price_per_night, :guest_capacity, numericality: { only_integer: true }
+  validates :price_per_night, :guest_capacity, numericality: { greater_than: 0 }
+  validates :overview, length: { minimum: 10 }
 
   # --------------------Geocoder-----------------------------------
   geocoded_by :city

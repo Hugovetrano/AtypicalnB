@@ -1,0 +1,9 @@
+<%= simple_form_for(current_user) do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :email %>
+  <%= f.input :phone_number %>
+  <%= f.input :overview %>
+  <%= f.input :photos, as: :file%>
+  <span class="submit-container-owner"><%= f.submit %></span>
+<% end %>

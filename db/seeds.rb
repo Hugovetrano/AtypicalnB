@@ -11,7 +11,7 @@ require "json"
 Property.destroy_all
 
 
-@user_id = 1
+@user_id = 2
 file = File.open("db/image/firehouse.jpg")
 property = Property.new(
 name: "Fire house",
@@ -92,6 +92,7 @@ property.photos.attach(io: file, filename: "helllakehouse", content_type: "image
 property.save!
 
 @user_id = 2
+
 file = File.open("db/image/sandhouse.jpg")
 property = Property.new(
 name: "Sand house",
@@ -428,6 +429,21 @@ user_id: @user_id
 property.photos.attach(io: file, filename: "Birdhouse", content_type: "image/png")
 property.save!
 
+
+file = File.open("db/image/spongebobhouse.jpg")
+property = Property.new(
+name: "Sponge Bob house",
+address: "11 Sponge Road",
+city: "BikiniCity",
+zipcode: "11111",
+overview: "Dive into the world of Bobsponge at the Bobsponge House, a vibrant underwater retreat inspired by the beloved cartoon. With its colorful decor and playful ambiance, it offers a fun-filled setting for an event that will delight both young and young at heart.",
+rating: 1,
+price_per_night: 219,
+guest_capacity: 1,
+user_id: @user_id
+)
+property.photos.attach(io: file, filename: "spongebobhouse", content_type: "image/png")
+property.save!
 
 
 properties = Property.all

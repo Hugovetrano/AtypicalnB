@@ -3,6 +3,7 @@
 .revenue-container-global {
   width: 800px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
@@ -20,21 +21,37 @@
   padding-top: 50px;
   // z-index: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  position: relative;
+  position: sticky; /* Set the position to sticky */
+  top: 155px; /* Adjust the value based on the height of your navbar */
+  z-index: 0;
+  h2 {
+    font-weight: bold;
+  }
+  height: fit-content;
 }
 .occupancy-div {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 50%;
+  width: 100%;
   background-color: #ffffff;
   border-radius: 10px;
   padding: 30px;
   padding-top: 50px;
   // z-index: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  position: relative;
+}
+
+.add-margin-to-cards {
+  margin-top: 15px;
+}
+
+.stat-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
 }
 
 .global-revenues {

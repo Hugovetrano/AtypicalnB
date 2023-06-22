@@ -40,17 +40,19 @@ property.save!
 
 file = File.open("db/image/firehouse.jpg")
 property = Property.new(
-name: "Fire house",
-address: "666 Fire Road",
-city: "FireCity",
-zipcode: "66600",
-overview: "Ignite your event at the Firehouse, where historic charm meets modern allure. Experience a captivating venue boasting exposed brick walls, high ceilings, and firefighting memorabilia, perfect for any occasion.",
-rating: 1,
-price_per_night: 99,
-guest_capacity: 1,
-user_id: @user_id
+    name: "Fire house",
+    address: "666 Fire Road",
+    city: "FireCity",
+    zipcode: "66600",
+    overview: "Ignite your event at the Firehouse, where historic charm meets modern allure. Experience a captivating venue boasting exposed brick walls, high ceilings, and firefighting memorabilia, perfect for any occasion.",
+    rating: 1,
+    price_per_night: 99,
+    guest_capacity: 1,
+    user_id: @user_id
 )
+file = File.open("db/image/firehouse.jpg")
 property.photos.attach(io: file, filename: "firehouse", content_type: "image/png")
+
 property.save!
 
 
@@ -278,165 +280,51 @@ user_id: @user_id
 property.photos.attach(io: file, filename: "DarkForesthouse", content_type: "image/png")
 property.save!
 
+file = File.open("db/image/airhouse.png")
+property.photos.attach(io: file, filename: "airhouse", content_type: "image/png")
 
 file = File.open("db/image/gianthouse.png")
-property = Property.new(
-name: "Giant house",
-address: "999 Giant Road",
-city: "GiantCity",
-zipcode: "99900",
-overview: "Step into the world of giants at the Giant House, a colossal venue that redefines grandeur. With its towering ceilings and expansive spaces, it offers an awe-inspiring setting for larger-than-life events that leave a lasting impact.",
-rating: 1,
-price_per_night: 749,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Gianthouse", content_type: "image/png")
-property.save!
+property.photos.attach(io: file, filename: "gianthouse", content_type: "image/png")
 
-
-file = File.open("db/image/strangehouse.png")
-property = Property.new(
-name: "Strange house",
-address: "456 Strange Road",
-city: "StrangeCity",
-zipcode: "45600",
-overview: "Embark on a journey through the extraordinary at the Strange House, a realm where reality blurs and imagination reigns. With its whimsical architecture and unconventional charm, it's the perfect venue for those seeking an event that defies expectations and embraces the wonderfully weird.",
-rating: 1,
-price_per_night: 649,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Strangehouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/airhouse.png")
-property = Property.new(
-name: "Air house",
-address: "196 Air Road",
-city: "AirCity",
-zipcode: "19600",
-overview: "Elevate your event to new heights at the Air House, a venue that breathes a sense of lightness and freedom. With its open spaces and breezy atmosphere, it offers a refreshing setting for an event that takes your breath away.",
-rating: 1,
-price_per_night: 549,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Airhouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/stonehouse.png")
-property = Property.new(
-name: "Stone house",
-address: "567 Stone Road",
-city: "StoneCity",
-zipcode: "56700",
-overview: "Uncover the timeless beauty of the Stone House, a sturdy sanctuary built to stand the test of time. With its rugged elegance and solid foundations, it provides a grounding backdrop for an event that exudes strength and lasting memories.",
-rating: 1,
-price_per_night: 449,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Stonehouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/santaclaushouse.png")
-property = Property.new(
-name: "Santa Claus house",
-address: "777 Claus Road",
-city: "SantaCity",
-zipcode: "77700",
-overview: "Experience the magic of the Santa Claus House, a whimsical wonderland where holiday dreams come true. With its festive decorations and joyful atmosphere, it's the perfect venue to spread cheer and create cherished memories during the most wonderful time of the year.
-",
-rating: 1,
-price_per_night: 349,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Santaclaushouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/levitatehouse.png")
-property = Property.new(
-name: "Levitate house",
-address: "842 Levitate Road",
-city: "LevitateCity",
-zipcode: "84200",
-overview: "Defy gravity at the Levitate House, a gravity-defying haven where the impossible becomes possible. With its mind-bending architecture and ethereal ambiance, it offers a truly extraordinary setting for an event that transcends the boundaries of imagination.",
-rating: 1,
-price_per_night: 949,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Levitatehouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/shoehouse.png")
-property = Property.new(
-name: "Shoe house",
-address: "888 Shoe Road",
-city: "ShoeCity",
-zipcode: "88800",
-overview: "Step into a world of whimsy at the Shoe House, a unique venue that celebrates footwear in all its glory. With its quirky design and playful charm, it offers a memorable setting for an event that will leave a lasting impression and keep guests on their toes.",
-rating: 1,
-price_per_night: 149,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Shoehouse", content_type: "image/png")
-property.save!
-
+file = File.open("db/image/icehouse.jpg")
+property.photos.attach(io: file, filename: "icehouse", content_type: "image/png")
 
 file = File.open("db/image/lighthouse.png")
-property = Property.new(
-name: "Light house",
-address: "999 Light Road",
-city: "LightCity",
-zipcode: "99900",
-overview: "Illuminate your event at the Light House, a beacon of elegance and radiance. With its panoramic views and ethereal glow, it offers a captivating setting for an enchanting gathering that shines bright in the memories of all who attend.",
-rating: 1,
-price_per_night: 49,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Lighthouse", content_type: "image/png")
-property.save!
-
-
-file = File.open("db/image/isolatehouse.jpg")
-property = Property.new(
-name: "Isolate house",
-address: "000 Isolate Road",
-city: "IsolateCity",
-zipcode: "00000",
-overview: "Escape to the Isolate House, a secluded sanctuary where serenity and solitude intertwine. With its tranquil surroundings and exclusive atmosphere, it provides a private retreat for an intimate event that embraces the beauty of seclusion",
-rating: 1,
-price_per_night: 19,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Isolatehouse", content_type: "image/png")
-property.save!
-
+property.photos.attach(io: file, filename: "lighthouse", content_type: "image/png")
 
 file = File.open("db/image/pockethouse.jpg")
-property = Property.new(
-name: "Pocket house",
-address: "111 Pocket Road",
-city: "PocketCity",
-zipcode: "11100",
-overview: "Discover the charm of the Pocket House, a tiny haven that packs a punch. With its compact design and efficient use of space, it offers a cozy and intimate setting for a delightful gathering that's small in size but big on character.",
-rating: 1,
-price_per_night: 119,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "Pockethouse", content_type: "image/png")
+property.photos.attach(io: file, filename: "pockethouse", content_type: "image/png")
+
+file = File.open("db/image/shoehouse.png")
+property.photos.attach(io: file, filename: "shoehouse", content_type: "image/png")
+
+file = File.open("db/image/stonehouse.png")
+property.photos.attach(io: file, filename: "stonehouse", content_type: "image/png")
+
+file = File.open("db/image/firehouse.jpg")
+property.photos.attach(io: file, filename: "firehouse", content_type: "image/png")
+
+file = File.open("db/image/airhouse.png")
+property.photos.attach(io: file, filename: "airhouse", content_type: "image/png")
+
+file = File.open("db/image/gianthouse.png")
+property.photos.attach(io: file, filename: "gianthouse", content_type: "image/png")
+
+file = File.open("db/image/icehouse.jpg")
+property.photos.attach(io: file, filename: "icehouse", content_type: "image/png")
+
+file = File.open("db/image/lighthouse.png")
+property.photos.attach(io: file, filename: "lighthouse", content_type: "image/png")
+
+file = File.open("db/image/pockethouse.jpg")
+property.photos.attach(io: file, filename: "pockethouse", content_type: "image/png")
+
+file = File.open("db/image/shoehouse.png")
+property.photos.attach(io: file, filename: "shoehouse", content_type: "image/png")
+
+file = File.open("db/image/stonehouse.png")
+property.photos.attach(io: file, filename: "stonehouse", content_type: "image/png")
+
 property.save!
 
 

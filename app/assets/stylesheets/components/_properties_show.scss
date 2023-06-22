@@ -1,5 +1,93 @@
 @import 'variables';
 
+.property-show-section {
+    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 25px;
+
+    width: 1200px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+
+    p {
+        word-break: break-all;
+    }
+
+    .property-show-images {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 25px;
+        width: 700px;
+
+        box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    }
+
+    .property-show-infos {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        height: 100%;
+    }
+
+    .property-show-details {
+        width: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+
+        box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+        padding: 25px;
+        flex-grow: 1;
+
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+    }
+
+    .property-show-book-part {
+        width: 400px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 25px;
+
+        box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+        padding: 25px;
+
+        height: 250px;
+
+    }
+
+    .property-show-miniatures-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+
+
+        img {
+            width: 212px;
+            height: 140px;
+            object-fit: cover;
+        }
+
+    }
+
+}
+
 .properties-show-container {
     display: flex;
     flex-direction: column;
@@ -38,20 +126,20 @@
 
 .new-booking-cta {
     border: 2px $sec-color solid;
-    color: $sec-color;
-    background-color: $pri-color;
+    color: $pri-color;
     border-radius: 15px;
     font-size: 1.3rem;
     padding: 10px 15px;
-
+    opacity: .75;
+    background-color: $sec-color;
     transition: .2s ease;
 
     &:hover {
         border: 2px $sec-color solid;
         color: $pri-color;
-        background-color: $sec-color;
         border-radius: 15px;
         font-size: 1.3rem;
         padding: 10px 15px;
+        opacity: 1;
     }
 }

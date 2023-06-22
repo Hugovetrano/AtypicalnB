@@ -21,7 +21,7 @@ header {
   border-end-end-radius: 20px;
   border-end-start-radius: 20px;
 
-  overflow: hidden;
+  // overflow: hidden; // -------------------- enlevé pour menu déroulant
 
   .header-small-links-container {
     height: 100%;
@@ -45,6 +45,7 @@ header {
       color: $sec-color;
     }
   }
+
 
   ul {
     // -------------------- Header's menu
@@ -96,4 +97,14 @@ header {
   .white {
     color: rgba(170, 170, 170, 0.5);
   }
+}
+
+.owner-mode-on.color-active,
+.color-active {
+  //----------------------- Header menu item color when page active
+  color: $thi-color;
+}
+
+li.dropdown-toggle:hover {
+  color: $thi-color;
 }

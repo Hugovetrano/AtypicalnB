@@ -1,7 +1,8 @@
 <div class="w-100 justify-content-center d-flex">
-<%= link_to "Add a property", new_property_path, class: "home-offer-card-cta" %>
+<%= link_to "Add a property", new_property_path, class: "home-offer-card-cta-owner" %>
 </div>
 <div class="back-plate">
+
 <% @properties.each do |property| %>
 <div div class="home-offer-card">
     <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
@@ -19,7 +20,7 @@
         </div>
         <div class="home-offer-card-infos-right">
             <p class="home-offer-card-price"><strong><%= property.price_per_night %></strong>€ / Night</p>
-            <%= link_to "Edit", edit_owner_property_path(property), class: "home-offer-card-cta" %>
+            <%= link_to "Edit", edit_owner_property_path(property), class: "home-offer-card-cta-owner" %>
         </div>
     </div>
 </div>

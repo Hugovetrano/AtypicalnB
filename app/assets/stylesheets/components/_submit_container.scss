@@ -29,3 +29,36 @@
     }
   }
 }
+
+
+.submit-container-owner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  input {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    background-color: $fif-color;
+    color: $pri-color;
+
+    border-radius: 7px;
+
+    padding: 5px 11px;
+
+    text-decoration: none;
+    //text-underline-offset: 30px;
+    //text-decoration-thickness: 2px;
+    border: none;
+    overflow: hidden;
+
+    transition: ease .2s;
+
+    &:hover {// -------------------- Colors and underline effects at CTA's hover
+        color: $pri-color;
+        background-color: $fio-color;
+        //text-underline-offset: 7px;
+    }
+  }
+}

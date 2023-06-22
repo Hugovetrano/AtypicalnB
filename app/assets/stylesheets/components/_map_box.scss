@@ -1,0 +1,22 @@
+.mapsearch {
+    padding: 15px;
+}
+
+.searchbar {
+    width: 100%;
+
+    input[type="text"] {
+        width: 65%;
+    }
+
+    input[type="submit"] {
+        width: 25%;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: baseline;
+    }
+}

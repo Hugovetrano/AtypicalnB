@@ -28,3 +28,25 @@
 .fou-color {
     color: $fou-color;
 }
+
+p {
+  word-break:normal;
+}
+
+body {
+  z-index: -1;
+}
+
+body::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: $pri-color; /* color of the tracking area */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: $scroll-color; /* color of the scroll thumb */
+    border-radius: 20px; /* roundness of the scroll thumb */
+    border: 3px solid $pri-color; /* creates padding around scroll thumb */
+  }

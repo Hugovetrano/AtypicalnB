@@ -7,8 +7,8 @@
     <a href="" class="home-banner-cta">Find the place of your dream !</a>
 </div>
 
+<div class="back-plate">
 <h2 class="w-100 text-center sec-color sec-color">Our most valued Experiences</h2>
-
 <% @properties.each do |property| %>
 
 <div class="home-offer-card">
@@ -31,8 +31,9 @@
             </div>
             <div class="home-offer-card-infos-right">
                 <p class="home-offer-card-price"><strong><%= property.price_per_night %>€</strong> / Night</p>
-                <%= link_to 'Book Now!', property_path(property), class: "home-offer-card-cta" %>
+                <%= link_to 'Book Now', property_path(property), class: "home-offer-card-cta" %>
             </div>
         </div>
     </div>
 <% end %>
+</div>

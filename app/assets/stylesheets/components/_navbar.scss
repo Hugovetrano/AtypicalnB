@@ -97,7 +97,7 @@ header {
   .white {
     color: rgba(170, 170, 170, 0.5);
   }
-}
+
 
 .owner-mode-on.color-active,
 .color-active {
@@ -108,3 +108,9 @@ header {
 li.dropdown-toggle:hover {
   color: $thi-color;
 }
+
+a.owner-mode-on:hover {
+      color :$fio-color;
+    }
+}
+

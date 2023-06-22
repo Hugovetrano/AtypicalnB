@@ -4,12 +4,12 @@
     <div class="home-offer-card-infos">
         <div class="home-offer-card-infos-left">
         <% if property.rating %>
-                <p class="property-rating-stars">
+            <p class="property-rating-stars">
                 <% property.rating.times do %>
                     ★
                 <% end %>
-                </p>
-                <% end %>
+            </p>
+        <% end %>
             <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
             <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ') %><%= link_to ' ...', property_path(property), class: "sec-color" %></p>
         </div>
@@ -20,14 +20,10 @@
     </div>
 </div>
 <% end %>
-<% if current_user.owner_mode %>
-    <div class="w-100 justify-content-center d-flex">
-    <%= link_to "Add a property", new_property_path, class: "home-offer-card-cta" %>
-    </div>
-<% end %>
 
 <div style="width: 100%; height: 600px;"
   data-controller="map"
   data-map-markers-value="<%= @markers.to_json %>"
   data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
+

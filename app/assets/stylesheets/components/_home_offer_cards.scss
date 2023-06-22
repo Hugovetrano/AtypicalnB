@@ -22,14 +22,15 @@
         width: auto;
     }
 
-    .property-rating-stars {
-        font-size: 1.5rem;
-        color: $thi-color;
-    }
+}
 
-    p {
-        margin-bottom: 0;
-    }
+p {
+    margin-bottom: 0;
+}
+
+.property-rating-stars {
+    font-size: 1.5rem;
+    color: $thi-color;
 }
 
 .home-offer-card-infos {

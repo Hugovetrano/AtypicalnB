@@ -24,7 +24,6 @@ class PropertiesController < ApplicationController
   def create
     @property = Property.new(property_params)
     @property.user_id = current_user.id
-    @property.photos.attach(params[:property][:photos])
     if @property.save
       redirect_to property_path(@property)
     else

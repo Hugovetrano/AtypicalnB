@@ -12,7 +12,7 @@
   <div class="property-show-images" data-controller="property-show-images">
     <%= cl_image_tag @property.photos[0].key,width: 648, height: 400, crop: 'fill' , data: { property_show_images_target: "mainPhoto" } %>
     <div class="property-show-miniatures-container">
-      <% @property.photos.limit(4).each do |photo| %>
+      <% @property.photos.limit(6).each do |photo| %>
         <%= cl_image_tag photo.key, data: { action: "click->property-show-images#updateMainPhoto", path: photo.key } %>
       <% end %>
     </div>

@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 550px;
+    width: 625px;
+    height: 490px;
     border-radius: 7px;
     overflow: hidden;
 
@@ -22,14 +23,15 @@
         width: auto;
     }
 
-    .property-rating-stars {
-        font-size: 1.5rem;
-        color: $thi-color;
-    }
+}
 
-    p {
-        margin-bottom: 0;
-    }
+p {
+    margin-bottom: 0;
+}
+
+.property-rating-stars {
+    font-size: 1.5rem;
+    color: $thi-color;
 }
 
 .home-offer-card-infos {
@@ -91,6 +93,35 @@
     &:hover {// -------------------- Colors and underline effects at CTA's hover
         color: $pri-color;
         background-color: $thi-color;
+        //text-underline-offset: 7px;
+    }
+
+}
+
+.home-offer-card-cta-owner {
+    // -------------------- CTA of the offer
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+
+    background-color: $fif-color;
+    color: $pri-color;
+
+    border-radius: 7px;
+
+    padding: 5px 11px;
+
+    text-decoration: none;
+    //text-underline-offset: 30px;
+    //text-decoration-thickness: 2px;
+
+    overflow: hidden;
+
+    transition: ease .2s;
+
+    &:hover {// -------------------- Colors and underline effects at CTA's hover
+        color: $pri-color;
+        background-color: $fio-color;
         //text-underline-offset: 7px;
     }
 

@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     resources :properties, only: [:index, :show, :edit, :update, :destroy]
   end
 
-  resources :users, only: %i[show]
+  resources :users
 
   get '/mode/toggle', to: 'users#toggleOwnerMode', as: :owner_mode_toggle
 end

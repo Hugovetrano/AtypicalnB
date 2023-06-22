@@ -6,6 +6,7 @@
   justify-content: center;
 }
 
+
 .profile-div {
   display: flex;
   justify-content: center;
@@ -15,8 +16,28 @@
   background-color: #ffffff;
   border-radius: 10px;
   padding: 30px;
+  padding-top: 50px;
   // z-index: 0;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+
+}
+
+.profile-edit-icon {
+  color: $sec-color;
+  &:hover {
+    color: $thi-color;
+  }
+}
+
+.profile-div i {
+  position: absolute;
+  top: 28px;
+  right: 13px;
+}
+
+.profile-overview {
+  text-align: center;
 }
 
 .profile-name {
@@ -26,7 +47,7 @@
   font-size: 17px;
   font-weight: lighter;
   color: #ccc;
-  margin-top: -15px;
+  margin-top: -5px;
 }
 
 .profile-stat {

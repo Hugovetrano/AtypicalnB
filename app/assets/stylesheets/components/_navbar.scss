@@ -127,10 +127,6 @@ header {
   .setting-menu {
     font-size: 18px;
     text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 
   .nav-separator-line {
@@ -145,7 +141,7 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
     text-align: center;
-
+    margin-top: 10px;
     background-color: $sec-color;
     color: $pri-color;
 

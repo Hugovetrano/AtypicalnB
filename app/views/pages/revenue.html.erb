@@ -1,0 +1,26 @@
+<% @revenue = 0 %>
+<% Property.where(user_id: current_user.id).each do |property| %>
+  <% property.bookings.each do |booking| %>
+    <% @revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
+  <% end %>
+<% end %>
+
+<div class="revenue-container-global">
+  <div class="revenue-div">
+    <h3>My revenue</h3>
+    <p>Total: <span id="revenue">+<%= @revenue %>€</span></p>
+    <ul class="list-group list-group-flush w-75">
+      <% Property.where(user_id: current_user.id).each do |property| %>
+        <% property.bookings.each do |booking| %>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <span><span class="text-secondary me-3"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></span> <%= booking.user.first_name %> <%= booking.user.last_name %></span>
+            <span class="badge bg-success rounded-pill">+<%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>€</span>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+  </div>
+  <div class="occupancy-div">
+    <h3>My revenue</h3>
+  </div>
+</div>

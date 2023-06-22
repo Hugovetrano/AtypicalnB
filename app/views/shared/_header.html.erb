@@ -18,9 +18,9 @@
             </div>
           </li>
           <% end %>
-          <li class="dropdown-item setting-menu"><%= link_to 'View stats', user_path(current_user), class: "header-small-links" %></li>
+          <li class="dropdown-item setting-menu"><%= link_to 'View stats', revenue_path, class: "header-small-links" %></li>
           <li class="dropdown-item setting-menu"><%= link_to 'Edit profile', user_path(current_user), class: "header-small-links" %></li>
-          <li class="dropdown-item setting-menu"><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar-logout-button" %></li>
+          <li class="dropdown-item setting-menu"><div class="nav-dropdown-div"><%= link_to 'Logout', destroy_user_session_path, data: {turbo_method: :delete}, class: "navbar-logout-button" %></div></li>
         </ul>
       </div>
     </ul>

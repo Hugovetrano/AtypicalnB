@@ -5,13 +5,13 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  resources :properties do
+  resources :properties do # -------------------- Properties
     resources :bookings, only: [:create]
   end
 
-  resources :bookings, except: [:create]
+  resources :bookings, except: [:create] #------- Bookings
 
-  namespace :owner do
+  namespace :owner do # ------------------------- Owner Space
     resources :bookings, only: [:index] do
       member do
         patch :accept
@@ -21,7 +21,10 @@ Rails.application.routes.draw do
     resources :properties, only: [:index, :show, :edit, :update, :destroy]
   end
 
-  resources :users
+  resources :users # ----------------------------- Users
+  get '/revenue', to: 'pages#revenue'
 
+
+  # -------- 0wner mode ------------- #
   get '/mode/toggle', to: 'users#toggleOwnerMode', as: :owner_mode_toggle
 end

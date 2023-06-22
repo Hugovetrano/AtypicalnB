@@ -29,6 +29,10 @@
     color: $fou-color;
 }
 
+p {
+  word-break:normal;
+}
+
 body::-webkit-scrollbar {
     width: 10px; /* width of the entire scrollbar */
   }

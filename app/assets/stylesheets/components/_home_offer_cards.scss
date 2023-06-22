@@ -6,7 +6,8 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    width: 550px;
+    width: 625px;
+    height: 490px;
     border-radius: 7px;
     overflow: hidden;
 
@@ -76,6 +77,8 @@ p {
     color: $pri-color;
 
     border-radius: 7px;
+
+    border: none;
 
     padding: 5px 11px;
 

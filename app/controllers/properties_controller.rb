@@ -3,7 +3,19 @@ class PropertiesController < ApplicationController
   before_action :set_flat, only: [:show, :update, :destroy]
 
   def index
-    @properties = Property.all
+    if params[:query].present?
+      sql_query = <<~SQL
+        properties.name @@ :query
+        OR properties.overview @@ :query
+        OR properties.city @@ :query
+        OR users.first_name @@ :query
+        OR users.last_name @@ :query
+      SQL
+      @properties = Property.joins(:user).where(sql_query, query: "%#{params[:query]}%")
+    else
+      @properties = Property.all
+    end
+
     @markers = @properties.geocoded.map do |property|
       {
         lat: property.latitude,

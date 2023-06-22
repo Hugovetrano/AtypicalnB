@@ -45,23 +45,48 @@ file4 = File.open("db/image/fire3.jpg")
 file5 = File.open("db/image/fire4.jpg")
 file6 = File.open("db/image/fire5.jpg")
 property = Property.new(
-    name: "Fire house",
-    address: "666 Fire Road",
-    city: "FireCity",
-    zipcode: "66600",
-    overview: "Ignite your event at the Firehouse, where historic charm meets modern allure. Experience a captivating venue boasting exposed brick walls, high ceilings, and firefighting memorabilia, perfect for any occasion.",
-    rating: 1,
-    price_per_night: 99,
-    guest_capacity: 1,
-    user_id: @user_id
+name: "Fire house",
+address: "666 Fire Road",
+city: "FireCity",
+zipcode: "66600",
+overview: "Ignite your event at the Firehouse, where historic charm meets modern allure. Experience a captivating venue boasting exposed brick walls, high ceilings, and firefighting memorabilia, perfect for any occasion.",
+rating: 1,
+price_per_night: 99,
+guest_capacity: 1,
+user_id: @user_id
 )
-file = File.open("db/image/firehouse.jpg")
 property.photos.attach(io: file1, filename: "firehouse1", content_type: "image/png")
 property.photos.attach(io: file2, filename: "firehouse2", content_type: "image/png")
 property.photos.attach(io: file3, filename: "firehouse3", content_type: "image/png")
 property.photos.attach(io: file4, filename: "firehouse4", content_type: "image/png")
 property.photos.attach(io: file5, filename: "firehouse5", content_type: "image/png")
-property.photos.attach(io: file5, filename: "firehouse6", content_type: "image/png")
+property.photos.attach(io: file6, filename: "firehouse6", content_type: "image/png")
+property.save!
+
+
+file1 = File.open("db/image/sandhouse.jpg")
+file2 = File.open("db/image/sand1.jpg")
+file3 = File.open("db/image/sand2.jpg")
+file4 = File.open("db/image/sand3.jpg")
+file5 = File.open("db/image/sand4.jpg")
+file6 = File.open("db/image/sand5.jpg")
+property = Property.new(
+name: "Sand house",
+address: "135 Sand Road",
+city: "SandCity",
+zipcode: "13500",
+overview: "Escape to the Sandhouse, a serene oasis by the shore for your dream event. With its beach-inspired decor and tranquil ambiance, it offers a perfect setting to unwind and create lasting memories on the sandy shores.",
+rating: 1,
+price_per_night: 999,
+guest_capacity: 1,
+user_id: @user_id
+)
+property.photos.attach(io: file1, filename: "sandhouse1", content_type: "image/png")
+property.photos.attach(io: file2, filename: "sandhouse2", content_type: "image/png")
+property.photos.attach(io: file3, filename: "sandhouse3", content_type: "image/png")
+property.photos.attach(io: file4, filename: "sandhouse4", content_type: "image/png")
+property.photos.attach(io: file5, filename: "sandhouse5", content_type: "image/png")
+property.photos.attach(io: file6, filename: "sandhouse6", content_type: "image/png")
 property.save!
 
 
@@ -128,22 +153,8 @@ user_id: @user_id
 property.photos.attach(io: file, filename: "helllakehouse", content_type: "image/png")
 property.save!
 
-@user_id = 2
 
-file = File.open("db/image/sandhouse.jpg")
-property = Property.new(
-name: "Sand house",
-address: "135 Sand Road",
-city: "SandCity",
-zipcode: "13500",
-overview: "Escape to the Sandhouse, a serene oasis by the shore for your dream event. With its beach-inspired decor and tranquil ambiance, it offers a perfect setting to unwind and create lasting memories on the sandy shores.",
-rating: 1,
-price_per_night: 999,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "sandhouse", content_type: "image/png")
-property.save!
+@user_id = 1
 
 
 file = File.open("db/image/octopushouse.png")
@@ -287,53 +298,6 @@ guest_capacity: 1,
 user_id: @user_id
 )
 property.photos.attach(io: file, filename: "DarkForesthouse", content_type: "image/png")
-property.save!
-
-file = File.open("db/image/airhouse.png")
-property.photos.attach(io: file, filename: "airhouse", content_type: "image/png")
-
-file = File.open("db/image/gianthouse.png")
-property.photos.attach(io: file, filename: "gianthouse", content_type: "image/png")
-
-file = File.open("db/image/icehouse.jpg")
-property.photos.attach(io: file, filename: "icehouse", content_type: "image/png")
-
-file = File.open("db/image/lighthouse.png")
-property.photos.attach(io: file, filename: "lighthouse", content_type: "image/png")
-
-file = File.open("db/image/pockethouse.jpg")
-property.photos.attach(io: file, filename: "pockethouse", content_type: "image/png")
-
-file = File.open("db/image/shoehouse.png")
-property.photos.attach(io: file, filename: "shoehouse", content_type: "image/png")
-
-file = File.open("db/image/stonehouse.png")
-property.photos.attach(io: file, filename: "stonehouse", content_type: "image/png")
-
-file = File.open("db/image/firehouse.jpg")
-property.photos.attach(io: file, filename: "firehouse", content_type: "image/png")
-
-file = File.open("db/image/airhouse.png")
-property.photos.attach(io: file, filename: "airhouse", content_type: "image/png")
-
-file = File.open("db/image/gianthouse.png")
-property.photos.attach(io: file, filename: "gianthouse", content_type: "image/png")
-
-file = File.open("db/image/icehouse.jpg")
-property.photos.attach(io: file, filename: "icehouse", content_type: "image/png")
-
-file = File.open("db/image/lighthouse.png")
-property.photos.attach(io: file, filename: "lighthouse", content_type: "image/png")
-
-file = File.open("db/image/pockethouse.jpg")
-property.photos.attach(io: file, filename: "pockethouse", content_type: "image/png")
-
-file = File.open("db/image/shoehouse.png")
-property.photos.attach(io: file, filename: "shoehouse", content_type: "image/png")
-
-file = File.open("db/image/stonehouse.png")
-property.photos.attach(io: file, filename: "stonehouse", content_type: "image/png")
-
 property.save!
 
 

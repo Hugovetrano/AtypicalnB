@@ -4,13 +4,11 @@ class PropertiesController < ApplicationController
 
   def index
     if params[:query].present?
-      sql_query = <<~SQL
-        properties.name @@ :query
-        OR properties.overview @@ :query
-        OR properties.city @@ :query
-        OR users.first_name @@ :query
-        OR users.last_name @@ :query
-      SQL
+      sql_query = "properties.name @@ :query \
+        OR properties.overview @@ :query \
+        OR properties.city @@ :query \
+        OR users.first_name @@ :query \
+        OR users.last_name @@ :query"
       @properties = Property.joins(:user).where(sql_query, query: "%#{params[:query]}%")
     else
       @properties = Property.all

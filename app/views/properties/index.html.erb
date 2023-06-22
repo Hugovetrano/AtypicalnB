@@ -1,12 +1,21 @@
-<div>
-<%= form_with url: properties_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find an experience"
-  %>
-  <%= submit_tag "Search", class: "home-offer-card-cta" %>
-<% end %>
+<div class="mapsearch little-back-plate">
+  <div class="searchbar">
+    <%= form_with url: properties_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find an experience"
+      %>
+  </div>
+  <div>
+    <%= submit_tag "Search", class: "home-offer-card-cta" %>
+  <% end %>
+  </div>
+  <div class="mapbox" style="width: 100%; height: 370px"
+    data-controller="map"
+    data-map-markers-value="<%= @markers.to_json %>"
+    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
 
 
@@ -35,10 +44,4 @@
         </div>
     </div>
     <% end %>
-</div>
-
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>

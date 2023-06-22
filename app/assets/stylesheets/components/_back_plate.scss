@@ -1,3 +1,5 @@
+@import 'variables';
+
 .back-plate {
     box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
     border-radius: 10px;
@@ -11,13 +13,19 @@
     gap: 50px;
 }
 
+$top: $navbar-height + 55px;
+
 .little-back-plate {
     box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
     border-radius: 10px;
     padding: 25px;
-
+    flex-wrap: wrap;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 25px;
+    position: fixed;
+    top: $top;
+    background-color: white;
+    right: 30px;
 }

@@ -38,7 +38,12 @@ property.photos.attach(io: file5, filename: "spongebobhouse5", content_type: "im
 property.save!
 
 
-file = File.open("db/image/firehouse.jpg")
+file1 = File.open("db/image/firehouse.jpg")
+file2 = File.open("db/image/fire1.jpg")
+file3 = File.open("db/image/fire2.jpg")
+file4 = File.open("db/image/fire3.jpg")
+file5 = File.open("db/image/fire4.jpg")
+file6 = File.open("db/image/fire5.jpg")
 property = Property.new(
     name: "Fire house",
     address: "666 Fire Road",
@@ -51,8 +56,12 @@ property = Property.new(
     user_id: @user_id
 )
 file = File.open("db/image/firehouse.jpg")
-property.photos.attach(io: file, filename: "firehouse", content_type: "image/png")
-
+property.photos.attach(io: file1, filename: "firehouse1", content_type: "image/png")
+property.photos.attach(io: file2, filename: "firehouse2", content_type: "image/png")
+property.photos.attach(io: file3, filename: "firehouse3", content_type: "image/png")
+property.photos.attach(io: file4, filename: "firehouse4", content_type: "image/png")
+property.photos.attach(io: file5, filename: "firehouse5", content_type: "image/png")
+property.photos.attach(io: file5, filename: "firehouse6", content_type: "image/png")
 property.save!
 
 

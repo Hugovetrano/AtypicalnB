@@ -1,14 +1,18 @@
 @import 'variables';
 
 .property-show-section {
-    border: 1px $sec-color solid;
-    border-radius: 5px;
+    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
     padding: 25px;
 
-    width: 100%;
+    width: 1200px;
     display: flex;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
+
+    p {
+        word-break: break-all;
+    }
 
     .property-show-images {
         display: flex;
@@ -25,7 +29,7 @@
     .property-show-infos {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
         height: 100%;
     }
 
@@ -122,20 +126,20 @@
 
 .new-booking-cta {
     border: 2px $sec-color solid;
-    color: $sec-color;
-    background-color: $pri-color;
+    color: $pri-color;
     border-radius: 15px;
     font-size: 1.3rem;
     padding: 10px 15px;
-
+    opacity: .75;
+    background-color: $sec-color;
     transition: .2s ease;
 
     &:hover {
         border: 2px $sec-color solid;
         color: $pri-color;
-        background-color: $sec-color;
         border-radius: 15px;
         font-size: 1.3rem;
         padding: 10px 15px;
+        opacity: 1;
     }
 }

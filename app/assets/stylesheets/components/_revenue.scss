@@ -8,6 +8,9 @@
   width: 100%;
 }
 
+.revenue-list {
+  width: 85%;
+}
 
 .revenue-div {
   display: flex;
@@ -71,4 +74,31 @@
   font-weight: 600;
   color: $green;
   margin-top: 10px;
+}
+
+.podium-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.podium-item {
+  text-align: center;
+}
+
+.podium-rank {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.podium-name {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.podium-revenue {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #888;
 }

@@ -9,7 +9,7 @@
   <div class="revenue-div">
     <h2>My revenue</h2>
     <p>Total: <span id="revenue">+<%= @revenue %>€</span></p>
-    <ul class="list-group list-group-flush w-75 mt-2">
+    <ul class="list-group list-group-flush mt-2 revenue-list">
       <% Property.where(user_id: current_user.id).each do |property| %>
         <% property.bookings.each do |booking| %>
           <li class="list-group-item d-flex justify-content-between align-items-center">
@@ -30,7 +30,30 @@
       <h3>Occupancy</h3>
       <%= line_chart current_user.bookings.group_by_day(:start_date).count, colors: ["#F1C27B", "#666"] %>
     </div>
-  </div>
 
+    <div class="occupancy-div add-margin-to-cards">
+      <h3>Best Sellers</h3>
+      <% @properties = [] %>
+      <% Property.where(user_id: current_user.id).each do |property| %>
+        <% property_revenue = 0 %>
+        <% property.bookings.each do |booking| %>
+          <%property_revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
+        <% end %>
+        <% @properties << {house: property.name, money: property_revenue} %>
+      <% end %>
+      <% @properties.sort_by! { |hash| hash[:revenue] } %>
+      <% @properties.reverse! %>
+      <% top_sellers = @properties.first(3) %>
+      <div class="podium-container">
+        <% top_sellers.each_with_index do |property, index| %>
+          <div class="podium-item">
+            <h3 class="podium-rank"><%= index + 1 %></h3>
+            <h4 class="podium-name"><%= property[:house] %></h4>
+            <p class="podium-revenue"><%= property[:money] %>€</p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 </div>

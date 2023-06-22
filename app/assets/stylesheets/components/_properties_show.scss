@@ -1,18 +1,7 @@
 @import 'variables';
 
 .property-show-section {
-    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
-    border-radius: 10px;
-    padding: 25px;
-
-    width: 1200px;
-    display: flex;
-    align-items: flex-start;
     justify-content: space-around;
-
-    p {
-        word-break: break-all;
-    }
 
     .property-show-images {
         display: flex;
@@ -21,8 +10,8 @@
         border-radius: 10px;
         overflow: hidden;
         padding: 25px;
-        width: 700px;
-
+        width: 750px;
+        height: 100%;
         box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
     }
 
@@ -34,7 +23,7 @@
     }
 
     .property-show-details {
-        width: 400px;
+        width: 450px;
         border-radius: 10px;
         overflow: hidden;
 
@@ -42,20 +31,28 @@
         flex-direction: column;
         justify-content: space-evenly;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
 
         box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
         padding: 25px;
         flex-grow: 1;
 
+        h2 {
+            margin-bottom: 0;
+        }
+
         p {
             font-size: 20px;
             text-align: center;
         }
+
+        .property-rating-stars {
+            font-size: 2.5rem;
+        }
     }
 
     .property-show-book-part {
-        width: 400px;
+        width: 450px;
         border-radius: 10px;
         overflow: hidden;
 
@@ -79,7 +76,7 @@
 
 
         img {
-            width: 212px;
+            width: 228px;
             height: 140px;
             object-fit: cover;
         }

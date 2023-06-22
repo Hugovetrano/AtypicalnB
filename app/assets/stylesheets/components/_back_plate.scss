@@ -1,0 +1,23 @@
+.back-plate {
+    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 25px;
+
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.little-back-plate {
+    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}

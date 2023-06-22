@@ -10,7 +10,6 @@ header {
   box-shadow: 3px 3px 16px 16px rgba(125, 125, 125, .15);
 
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
@@ -24,22 +23,27 @@ header {
 
   overflow: hidden;
 
-  .header-container {
-    // -------------------- Header's container
+  .header-small-links-container {
     height: 100%;
-    width: 100%;
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    padding-bottom: 15px;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  img {
-    // -------------------- AtypicalnB logo
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
+  .header-small-links {
+    color: $thi-color;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: .2s ease;
+
+    &:hover {
+      // -------------------- Hover effect over Logout link
+      color: $sec-color;
+    }
   }
 
   ul {
@@ -48,6 +52,7 @@ header {
 
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
 
     margin-bottom: 0;
     padding: 0;
@@ -55,7 +60,8 @@ header {
     li {
       // -------------------- Header's menu items
       list-style-type: none;
-      font-size: 1.4rem;
+      font-size: 1.6rem;
+      width: 210px;
     }
   }
 
@@ -64,8 +70,7 @@ header {
     color: $sec-color;
     font-weight: 500;
 
-    text-decoration: underline;
-    text-underline-offset: 50px;
+    text-decoration: none;
 
     display: flex;
     flex-direction: column;
@@ -77,15 +82,7 @@ header {
     &:hover {
       // -------------------- Hover effect over header's menu items
       color: $thi-color;
-      text-decoration-thickness: 2px;
-      text-underline-offset: 8px;
     }
-  }
-
-  .switch-container {
-    position: absolute;
-    left: 25px;
-    top: 10px;
   }
 
   .owner-mode-on {

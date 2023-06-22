@@ -2,7 +2,7 @@
   <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
     <div class="profile p-4">
       <div class="image d-flex flex-column justify-content-center align-items-center">
-        <%= cl_image_tag current_user.photo.key, class: "avatar" %>
+        <img src="https://res.cloudinary.com/dfuzqnyhu/image/upload/c_crop,h_565,w_565,x_0/v1686910297/samples/people/smiling-man.jpg" class="avatar" >
         <p class="name mt-3"><%= current_user.first_name %> <%= current_user.last_name %></p>
         <p class="name">Rating host: 5 <span class="star">★</span></p>
         <p class="idd"><%= current_user.email %></p>

@@ -91,6 +91,7 @@ user_id: @user_id
 property.photos.attach(io: file, filename: "helllakehouse", content_type: "image/png")
 property.save!
 
+@user_id = 2
 
 file = File.open("db/image/sandhouse.jpg")
 property = Property.new(

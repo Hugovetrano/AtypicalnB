@@ -1,3 +1,4 @@
+<h2 class="w-100 text-center sec-color sec-color">My Reservations</h2>
 <% @bookings.each do |booking| %>
   <div class="home-offer-card ">
       <%= cl_image_tag booking.property.photos[0].key, class:"home-offer-card-img"%>

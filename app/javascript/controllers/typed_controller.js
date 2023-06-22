@@ -9,7 +9,7 @@ export default class extends Controller {
 
   connect() {
     const options = {
-      strings: ['Castle', 'Even', 'Evil', 'Step'],
+      strings: ['Castle', 'Manor', 'Treehouse', 'Lighthouse', 'Cave', 'Houseboat', 'unique place'],
       typeSpeed: 30,
       backSpeed: 45,
       cursorChar: ' <span class="pri-color"> <</span>',

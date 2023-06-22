@@ -1,57 +1,30 @@
-<div class="container-global">
-  <div class="container-profile">
-  <%# mt-4 mb-4 p-3 d-flex justify-content-center %>
-    <div class="profile p-4">
-      <div class="image-profile">
-       <%# d-flex flex-column justify-content-center align-items-center %>
-        <img src="https://res.cloudinary.com/dfuzqnyhu/image/upload/c_crop,h_565,w_565,x_0/v1686910297/samples/people/smiling-man.jpg" class="avatar" >
-        <p class="profile-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
-        <%# mt-3 %>
-        <p class="profile-name">Rating host: 5 <span class="star">★</span></p>
-        <p class="idd"><%= current_user.email %></p>
-        <p class="idd">Phone: <%= current_user.phone_number %></p>
-        <div>
-        <%# class="d-flex flex-row justify-content-center align-items-center" %>
-          <span class="number"><%= current_user.properties.count %> <span class="follow"><%= link_to "Properties", owner_properties_path, class: "links-users"  %></span> // <%= current_user.bookings.count %> <span class="follow"><%= link_to "Bookings", owner_bookings_path, class: "links-users"  %></span></span>
-        </div>
-        <div>
-         <%# class=" d-flex mt-2" %>
-          <%= link_to "Update Profile", root_path, class: "home-offer-card-cta" %>
-        </div>
-        <div>
-         <%# class="text mt-3" %>
-          <p><%= current_user.overview %></p>
-        </div>
-        <div>
-         <%# class=" px-2 rounded mt-4 date " %>
-          <span class="join">Joined May,2021</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="global-revenues">
-    <div class="revenue">
-    <%# container mt-4 mb-4 p-3  %>
-      <% @revenue = 0 %>
-      <% Property.where(user_id: current_user.id).each do |property| %>
-        <% property.bookings.each do |booking| %>
-          <% @revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
-        <% end %>
+<% @revenue = 0 %>
+    <% Property.where(user_id: current_user.id).each do |property| %>
+      <% property.bookings.each do |booking| %>
+        <% @revenue += booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>
       <% end %>
-      <h3>My revenue</h3>
-      <p>Total: <span id="revenue">+<%= @revenue %>€</span></p>
+    <% end %>
 
-      <ul class="list-group list-group-flush w-75">
-        <% Property.where(user_id: current_user.id).each do |property| %>
-          <% property.bookings.each do |booking| %>
-            <li class="list-group-item d-flex justify-content-between align-items-center">
-              <span><span class="text-secondary me-3"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></span> <%= booking.user.first_name %> <%= booking.user.last_name %></span>
-              <span class="badge bg-success rounded-pill">+<%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %>€</span>
-            </li>
-          <% end %>
-        <% end %>
-      </ul>
-    </div>
+<div class="container-global">
+  <div class="profile-div">
+    <img src="https://res.cloudinary.com/dfuzqnyhu/image/upload/c_crop,h_565,w_565,x_0/v1686910297/samples/people/smiling-man.jpg" class="avatar-large-bordered">
+    <p class="profile-name"><%= current_user.first_name %> <%= current_user.last_name %></p>
+    <p class="profile-email"><%= current_user.email %></p>
+    <ul class="profile-stat">
+      <li>
+        <p class="profile-stat-number"><%= current_user.bookings.count %></p>
+        <p class="profile-stat-number-title">Booking(s)</p>
+      </li>
+      <li>
+        <p class="profile-stat-number"><%= current_user.properties.count %></p>
+        <p class="profile-stat-number-title">Propertie(s)</p>
+      </li>
+      <li>
+        <p class="profile-stat-number"><%= @revenue %>€</p>
+        <p class="profile-stat-number-title">Revenue</p>
+      </li>
+    </ul>
+    <%# <p class="profile-name">Rating host: 5 <span class="star">★</span></p> %>
+
   </div>
 </div>

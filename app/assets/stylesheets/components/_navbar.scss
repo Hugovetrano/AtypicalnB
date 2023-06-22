@@ -96,4 +96,8 @@ header {
   .white {
     color: rgba(170, 170, 170, 0.5);
   }
+
+a.owner-mode-on:hover {
+      color :$fio-color;
+    }
 }

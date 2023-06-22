@@ -1,3 +1,9 @@
+<% if current_user.owner_mode %>
+    <div class="w-100 justify-content-center d-flex">
+    <%= link_to "Add a property", new_property_path, class: "home-offer-card-cta" %>
+    </div>
+<% end %>
+
 <% @properties.each do |property| %>
 <div div class="home-offer-card">
     <%= cl_image_tag property.photos[0].key, class:"home-offer-card-img"%>
@@ -19,11 +25,6 @@
         </div>
     </div>
 </div>
-<% end %>
-<% if current_user.owner_mode %>
-    <div class="w-100 justify-content-center d-flex">
-    <%= link_to "Add a property", new_property_path, class: "home-offer-card-cta" %>
-    </div>
 <% end %>
 
 <div style="width: 100%; height: 600px;"

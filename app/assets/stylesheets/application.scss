@@ -33,6 +33,10 @@ p {
   word-break:normal;
 }
 
+body {
+  z-index: -1;
+}
+
 body::-webkit-scrollbar {
     width: 10px; /* width of the entire scrollbar */
   }

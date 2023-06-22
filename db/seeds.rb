@@ -13,7 +13,7 @@ Booking.destroy_all
 Property.destroy_all
 
 
-@user_id = 2
+@user_id = 1
 
 file1 = File.open("db/image/spongebobhouse.png")
 file2 = File.open("db/image/bob1.jpg")

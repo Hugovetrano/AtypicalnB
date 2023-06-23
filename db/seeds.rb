@@ -115,7 +115,7 @@ city: "La Rochelle",
 zipcode: "17000",
 overview: "Special house for your cat, with Laurent, the special guest houser with nine lifes. Be careful, in this house you will have earthquake, thunderstorm, tsunami, no electricity etc",
 rating: 1,
-price_per_night: 0,
+price_per_night: 999,
 guest_capacity: 1,
 user_id: @user_id
 )

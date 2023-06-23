@@ -45,13 +45,30 @@
       <% @properties.reverse! %>
       <% top_sellers = @properties.first(3) %>
       <div class="podium-container">
-        <% top_sellers.each_with_index do |property, index| %>
-          <div class="podium-item">
-            <h3 class="podium-rank"><%= index + 1 %></h3>
-            <h4 class="podium-name"><%= property[:house] %></h4>
-            <p class="podium-revenue"><%= property[:money] %>€</p>
+        <% @property1 =  top_sellers[0] %>
+        <% @property2 =  top_sellers[1] %>
+        <% @property3 =  top_sellers[2] %>
+        <div class="podium-item2">
+          <h4 class="podium-name"><%= @property2[:house] %></h4>
+          <p class="podium-revenue">+<%= @property2[:money] %>€</p>
+          <div class="podium-2">
+            <h3 class="podium-rank">2</h3>
           </div>
-        <% end %>
+        </div>
+        <div class="podium-item1">
+          <h4 class="podium-name"><%= @property1[:house] %></h4>
+          <p class="podium-revenue">+<%= @property1[:money] %>€</p>
+          <div class="podium-1">
+            <h3 class="podium-rank">1</h3>
+          </div>
+        </div>
+        <div class="podium-item3">
+          <h4 class="podium-name"><%= @property3[:house] %></h4>
+          <p class="podium-revenue">+<%= @property3[:money] %>€</p>
+          <div class="podium-3">
+            <h3 class="podium-rank">3</h3>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -4,19 +4,19 @@
 }
 
 
-h3 {
-font-size: 15px;
-font-weight: bold;
-}
-
-p {
-  font-size: 12px;
-}
 
 .info-map-box-text {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  h3 {
+  font-size: 15px;
+  font-weight: bold;
+  }
+
+  p {
+    font-size: 12px;
+  }
 }
 
 .mapboxgl-popup-content {

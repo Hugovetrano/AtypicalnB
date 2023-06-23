@@ -1,5 +1,64 @@
+@import 'variables';
+
+.map-box-container {
+    box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+    border-radius: 10px;
+    padding: 25px;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: white;
+    top: $top;
+    position: fixed;
+
+    transition: .2s ease;
+
+    &.opened {
+        right: 30px;
+    }
+
+    &.closed {
+        right: -348px;
+        -webkit-animation: shake-horizontal 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+        animation: shake-horizontal 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
+    }
+
+    path {
+        fill: $sec-color;
+    }
+
+    ellipse {
+        fill: $sec-color;
+        opacity: .25;
+    }
+
+}
+
 .mapsearch {
     padding: 15px;
+
+    .close-map-arrow {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 0;
+        top: 0;
+        font-size: 1.8rem;
+        color: $sec-color;
+
+        &::before {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $pri-color;
+            border: 2px solid $sec-color;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+            border-radius: 30px;
+        }
+    }
 }
 
 .searchbar {
@@ -18,5 +77,75 @@
         display: flex;
         justify-content: space-evenly;
         align-items: baseline;
+    }
+}
+
+
+
+@-webkit-keyframes shake-horizontal {
+
+    0%,
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+
+    80% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    90% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
+    }
+}
+
+@keyframes shake-horizontal {
+
+    0%,
+    25% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    2.5%,
+    7.5%,
+    12.5%,
+    17.5% {
+        -webkit-transform: translateX(-10px);
+        transform: translateX(-10px);
+    }
+
+    5%,
+    10%,
+    15% {
+        -webkit-transform: translateX(10px);
+        transform: translateX(10px);
+    }
+
+    20% {
+        -webkit-transform: translateX(8px);
+        transform: translateX(8px);
+    }
+
+    22.5% {
+        -webkit-transform: translateX(-8px);
+        transform: translateX(-8px);
     }
 }

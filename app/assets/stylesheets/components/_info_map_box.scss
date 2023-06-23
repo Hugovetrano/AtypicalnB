@@ -1,0 +1,38 @@
+.info-map-box {
+  width: 100%;
+  box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+
+.info-map-box-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  h3 {
+  font-size: 15px;
+  font-weight: bold;
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.mapboxgl-popup-content {
+  width: 200px;
+  height: auto;
+  box-shadow: 0 0 10px 3px rgba(120, 120, 120, 0.30) !important;
+    img {
+      max-height: 150px;
+    }
+}
+
+.mapbox.mapboxgl-map {
+  overflow: visible;
+
+}
+
+.mapboxgl-ctrl-bottom-left {
+  display: none;
+}

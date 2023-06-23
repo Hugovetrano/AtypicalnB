@@ -1,8 +1,7 @@
 @import 'variables';
-
 .home-offer-card {
-    // -------------------- The main container of a card unit
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  // -------------------- The main container of a card unit
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -12,62 +11,64 @@
     overflow: hidden;
 
     &:hover {
-        // -------------------- Shaddow effect at the card's hover
-        box-shadow: 0 0 16px rgba(0, 0, 0, 0.20);
+      // -------------------- Shaddow effect at the card's hover
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.20);
     }
 
     img {
-        // -------------------- The illustration of the offer
-        height: 300px;
-        object-fit: cover;
-        width: auto;
+      // -------------------- The illustration of the offer
+      height: 300px;
+      object-fit: cover;
+      width: auto;
     }
 
-}
+  }
 
-p {
+  p {
     margin-bottom: 0;
-}
+  }
 
-.property-rating-stars {
+  .property-rating-stars {
     font-size: 1.5rem;
     color: $thi-color;
-}
+  }
 
-.home-offer-card-infos {
+  .home-offer-card-infos {
     // -------------------- Subsection, containing "infos" section (everything, without the illustration)
     display: flex;
     padding: 15px 20px;
     align-items: center;
     gap: 15px;
-}
+  }
 
-.home-offer-card-infos-left {
+  .home-offer-card-infos-left {
     // -------------------- Subsection containing the title and the descriptionof the offer
     width: 80%;
-}
+  }
 
-.home-offer-card-infos-right {
+  .home-offer-card-infos-right {
     // -------------------- Subsection containing the price per night, and the CTA
     width: 30%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: 15px;
-}
+  }
 
-.home-offer-card-infos-name {
+  .home-offer-card-infos-name {
     // -------------------- Title of the offer
     font-size: 1.6rem;
-}
+    text-rendering: optimizeLegibility;
+  }
 
-.home-offer-card-infos-description {
+  .home-offer-card-infos-description {
     // -------------------- Description of the offer
     font-size: 1rem;
     color: grey;
-}
+    text-rendering: optimizeLegibility;
+  }
 
-.home-offer-card-cta {
+  .home-offer-card-cta {
     // -------------------- CTA of the offer
     font-size: 1.2rem;
     font-weight: bold;
@@ -91,14 +92,14 @@ p {
     transition: ease .2s;
 
     &:hover {// -------------------- Colors and underline effects at CTA's hover
-        color: $pri-color;
-        background-color: $thi-color;
-        //text-underline-offset: 7px;
+      color: $pri-color;
+      background-color: $thi-color;
+      //text-underline-offset: 7px;
     }
 
-}
+  }
 
-.home-offer-card-cta-owner {
+  .home-offer-card-cta-owner {
     // -------------------- CTA of the offer
     font-size: 1.2rem;
     font-weight: bold;
@@ -120,12 +121,13 @@ p {
     transition: ease .2s;
 
     &:hover {// -------------------- Colors and underline effects at CTA's hover
-        color: $pri-color;
-        background-color: $fio-color;
-        //text-underline-offset: 7px;
+      color: $pri-color;
+      background-color: $fio-color;
+      //text-underline-offset: 7px;
     }
 
-}
+  }
+
 
 .home-offer-card-cta-owner-add {
   // -------------------- CTA of the offer
@@ -158,57 +160,66 @@ p {
 
 @media screen and (min-width: 551px) and (max-width: 805px) {
 
+
     // -------------------- Medium Devices
     .home-offer-card-infos {
-        // -------------------- Subsection, containing "infos" section (everything, without the illustration)
-        display: flex;
-        flex-direction: column;
+      // -------------------- Subsection, containing "infos" section (everything, without the illustration)
+      display: flex;
+      flex-direction: column;
     }
 
     .home-offer-card-infos-left {
-        // -------------------- Subsection containing the title and the descriptionof the offer
-        width: 100%;
+      // -------------------- Subsection containing the title and the descriptionof the offer
+      width: 100%;
     }
 
     .home-offer-card-infos-right {
-        // -------------------- Subsection containing the price per night, and the CTA
-        width: 100%;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
+      // -------------------- Subsection containing the price per night, and the CTA
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: center;
     }
 
     .home-offer-card-cta {
-        // -------------------- CTA of the offer
-        width: 45%;
-        padding: 10px;
+      // -------------------- CTA of the offer
+      width: 45%;
+      padding: 10px;
     }
-}
+  }
 
-@media screen and (max-width: 550px) {
+  @media screen and (max-width: 550px) {
 
     // -------------------- Small devices
     .home-offer-card-infos {
-        // -------------------- Subsection, containing "infos" section (everything, without the illustration)
-        display: flex;
-        flex-direction: column;
-        text-align: center;
+      // -------------------- Subsection, containing "infos" section (everything, without the illustration)
+      display: flex;
+      flex-direction: column;
+      text-align: center;
     }
 
     .home-offer-card-infos-left {
-        // -------------------- Subsection containing the title and the descriptionof the offer
-        width: 100%;
+      // -------------------- Subsection containing the title and the descriptionof the offer
+      width: 100%;
     }
 
     .home-offer-card-infos-right {
-        // -------------------- Subsection containing the price per night, and the CTA
-        width: 100%;
-        align-items: center;
+      // -------------------- Subsection containing the price per night, and the CTA
+      width: 100%;
+      align-items: center;
     }
 
     .home-offer-card-cta {
-        // -------------------- CTA of the offer
-        width: 75%;
-        padding: 10px;
+      // -------------------- CTA of the offer
+      width: 75%;
+      padding: 10px;
     }
-}
+  }
+
+  .bookings-card-modif {
+    height: 350px !important;
+    width: 416px !important;
+    img {
+      height: 66% !important;
+    }
+  }

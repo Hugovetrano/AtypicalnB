@@ -33,7 +33,7 @@ header {
   }
 
   .header-small-links {
-    color: $thi-color;
+    color: $fif-color;
     font-weight: 500;
 
     text-decoration: none;
@@ -42,7 +42,7 @@ header {
 
     &:hover {
       // -------------------- Hover effect over Logout link
-      color: $sec-color;
+      color: $fio-color;
     }
   }
 
@@ -102,15 +102,29 @@ header {
   .owner-mode-on.color-active,
   .color-active {
     //----------------------- Header menu item color when page active
-    color: $thi-color;
+    color: $fio-color;
   }
 
-  li.dropdown-toggle:hover {
-    color: $thi-color;
+  li.dropdown-toggle.owner-mode-on:hover {
+    color: $fio-color;
   }
 
   a.owner-mode-on:hover {
         color :$fio-color;
+      }
+
+  .owner-mode-off.color-active,
+  .color-active {
+  //----------------------- Header menu item color when page active
+    color: $thi-color;
+  }
+    
+  li.dropdown-toggle:hover {
+    color: $thi-color;
+  }
+    
+  a.owner-mode-off:hover {
+        color :$thi-color;
       }
 
   .nav-dropdown-div {
@@ -141,7 +155,6 @@ header {
     font-size: 0.8rem;
     font-weight: bold;
     text-align: center;
-    margin-top: 10px;
     background-color: $sec-color;
     color: $pri-color;
 

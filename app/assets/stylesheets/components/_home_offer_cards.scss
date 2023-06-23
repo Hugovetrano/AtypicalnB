@@ -59,12 +59,14 @@ p {
 .home-offer-card-infos-name {
     // -------------------- Title of the offer
     font-size: 1.6rem;
+    text-rendering: optimizeLegibility;
 }
 
 .home-offer-card-infos-description {
     // -------------------- Description of the offer
     font-size: 1rem;
     color: grey;
+    text-rendering: optimizeLegibility;
 }
 
 .home-offer-card-cta {

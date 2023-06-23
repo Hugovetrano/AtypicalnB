@@ -85,6 +85,11 @@
 
 }
 
+.selected-image {
+    border: 5px solid $sec-color;
+    border-radius: 3px;
+}
+
 .properties-show-container {
     display: flex;
     flex-direction: column;
@@ -139,4 +144,14 @@
         padding: 10px 15px;
         opacity: 1;
     }
+}
+
+.bouton-add-new-fixe{
+    position: fixed;
+    bottom: $footer-height;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 10px;
+    background-color: #6554af;
+    box-shadow: 0 0 30px #333;
 }

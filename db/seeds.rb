@@ -13,7 +13,7 @@ Booking.destroy_all
 Property.destroy_all
 
 
-@user_id = 6
+@user_id = 1
 
 file1 = File.open("db/image/spongebobhouse.png")
 file2 = File.open("db/image/bob1.jpg")
@@ -74,7 +74,7 @@ file6 = File.open("db/image/sand5.jpg")
 property = Property.new(
 name: "Sand house",
 address: "135 Sand Road",
-city: "SandCity",
+city: "Pau",
 zipcode: "13500",
 overview: "Escape to the Sandhouse, a serene oasis by the shore for your dream event. With its beach-inspired decor and tranquil ambiance, it offers a perfect setting to unwind and create lasting memories on the sandy shores.",
 rating: 1,
@@ -104,6 +104,22 @@ guest_capacity: 1,
 user_id: @user_id
 )
 property.photos.attach(io: file, filename: "icehouse", content_type: "image/png")
+property.save!
+
+
+file = File.open("db/image/cathouse.jpg")
+property = Property.new(
+name: "Laurent house",
+address: "123 Cat Road, La Rochelle",
+city: "La Rochelle",
+zipcode: "17000",
+overview: "Special house for your cat, with Laurent, the special guest houser with nine lifes. Be careful, in this house you will have earthquake, thunderstorm, tsunami, no electricity etc",
+rating: 1,
+price_per_night: 0,
+guest_capacity: 1,
+user_id: @user_id
+)
+property.photos.attach(io: file, filename: "cathouse", content_type: "image/png")
 property.save!
 
 
@@ -153,24 +169,6 @@ user_id: @user_id
 )
 property.photos.attach(io: file, filename: "helllakehouse", content_type: "image/png")
 property.save!
-
-
-file = File.open("db/image/sandhouse.jpg")
-property = Property.new(
-name: "Sand house",
-address: "135 Sand Road, Pau",
-city: "Pau",
-zipcode: "13500",
-overview: "Escape to the Sandhouse, a serene oasis by the shore for your dream event. With its beach-inspired decor and tranquil ambiance, it offers a perfect setting to unwind and create lasting memories on the sandy shores.",
-rating: 1,
-price_per_night: 999,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "sandhouse", content_type: "image/png")
-property.save!
-
-@user_id = 1
 
 
 file = File.open("db/image/octopushouse.png")
@@ -490,28 +488,13 @@ price_per_night: 219,
 guest_capacity: 1,
 user_id: @user_id
 )
+
 # coordinates = Geocoder.search(property_one[:city])
 # puts coordinates
 # property_one[:latitude] = coordinates[:latitude]
 # property_one[:longitude] = coordinates[:longitude]
 property_one.photos.attach(io: file, filename: "Birdhouse", content_type: "image/png")
 property_one.save!
-
-
-file = File.open("db/image/spongebobhouse.png")
-property = Property.new(
-name: "Sponge Bob house",
-address: "11 Sponge Road, Orleans",
-city: "Orleans",
-zipcode: "11111",
-overview: "Dive into the world of Bobsponge at the Bobsponge House, a vibrant underwater retreat inspired by the beloved cartoon. With its colorful decor and playful ambiance, it offers a fun-filled setting for an event that will delight both young and young at heart.",
-rating: 1,
-price_per_night: 219,
-guest_capacity: 1,
-user_id: @user_id
-)
-property.photos.attach(io: file, filename: "spongebobhouse", content_type: "image/png")
-property.save!
 
 
 

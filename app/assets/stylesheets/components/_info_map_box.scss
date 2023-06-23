@@ -1,0 +1,25 @@
+.info-map-box {
+  width: 100%;
+  box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+}
+
+
+h3 {
+font-size: 15px;
+font-weight: bold;
+}
+
+p {
+  font-size: 12px;
+}
+
+.info-map-box-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.mapboxgl-popup-content {
+  width: 200px;
+  height: auto
+}

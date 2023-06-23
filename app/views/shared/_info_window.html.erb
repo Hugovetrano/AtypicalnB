@@ -1,0 +1,19 @@
+<%= link_to property_path(property) do  %>
+  <%= cl_image_tag property.photos[0].key, class: "info-map-box" %>
+<%end%>
+
+<div class="m-2">
+  <div class="info-map-box-text">
+    <h3><%= property.name %></h3>
+    <p><strong><%= property.price_per_night %></strong>€ / Night</p>
+  </div>
+  <div>
+  <p><% if property.rating %>
+          <%# <p class="property-rating-stars"> %>
+            <% property.rating.times do %>
+              <span class="property-rating-stars">★</span>
+            <% end %>
+          <%# </p> %>
+        <% end %>
+    <%= property.city %></p>
+  </div>

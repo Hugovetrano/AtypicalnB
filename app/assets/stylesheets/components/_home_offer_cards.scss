@@ -128,7 +128,38 @@
 
   }
 
-  @media screen and (min-width: 551px) and (max-width: 805px) {
+
+.home-offer-card-cta-owner-add {
+  // -------------------- CTA of the offer
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+
+  background-color: $fif-color;
+  color: $pri-color;
+
+  border-radius: 7px;
+
+  padding: 10px 22px;
+
+  text-decoration: none;
+  //text-underline-offset: 30px;
+  //text-decoration-thickness: 2px;
+
+  overflow: hidden;
+
+  transition: ease .2s;
+
+  &:hover {// -------------------- Colors and underline effects at CTA's hover
+      color: $pri-color;
+      background-color: $fio-color;
+      //text-underline-offset: 7px;
+  }
+
+}
+
+@media screen and (min-width: 551px) and (max-width: 805px) {
+
 
     // -------------------- Medium Devices
     .home-offer-card-infos {

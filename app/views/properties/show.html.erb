@@ -24,15 +24,18 @@
           <% end %>
         </p>
       <% end %>
-      <p><%= @property.overview %></p>
+      <p class="overview-css"><%= @property.overview %></p>
       <p><strong><%= @property.price_per_night %></strong>€ / Night</p>
     </div>
     <div class="property-show-book-part">
       <%= simple_form_for(@booking, url: property_bookings_path(@property)) do |f| %>
-        <label class="sec-color new-booking-label" for="">Tell us when :</label>
-        <input data-action="change->set-total-price#updatePrice" data-set-total-price-input class="new-booking-date-input" type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value=<%= array.to_json %>>
+        <p class="sec-color new-booking-label">Tell us when :</p>
+        <input class="form-input-select" data-action="change->set-total-price#updatePrice" data-set-total-price-input class="new-booking-date-input" type="string" placeholder='Select your desired dates' data-controller="datepicker" data-datepicker-array-value=<%= array.to_json %>>
         <%= f.input :start_date, as: :hidden, input_html: { id: "start_date" } %>
         <%= f.input :end_date, as: :hidden, input_html: { id: "end_date" } %>
+        <p class="sec-color new-booking-label">With whom?</p>
+
+        <%= f.input :number_of_guest, label: false, placeholder: 'Enter the number of guests', input_html: { class: "form-input-select" } %>
         <%= f.submit 'Book my dream', class: "new-booking-cta" %>
       <% end %>
     </div>

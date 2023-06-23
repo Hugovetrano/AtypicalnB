@@ -1,6 +1,5 @@
 <%= link_to "Add a new property", new_property_path, class: "home-offer-card-cta-owner bouton-add-new-fixe"  %>
 
-
 <div class="back-plate">
 <% @properties.each do |property| %>
 <div div class="home-offer-card">
@@ -13,7 +12,7 @@
                     ★
                 <% end %>
                 </p>
-                <% end %> 
+                <% end %>
             <h3 class="home-offer-card-infos-name"><%= property.name %></h3>
             <p class="home-offer-card-infos-description"><%= truncate(property.overview, length: 100, omission: ' ...') %></p>
         </div>
@@ -24,4 +23,7 @@
     </div>
 </div>
 <% end %>
+<div class="w-100 justify-content-center d-flex">
+<%= link_to "Add a property", new_property_path, class: "home-offer-card-cta-owner-add" %>
+</div>
 </div>

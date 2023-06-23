@@ -7,6 +7,17 @@
       <div class="owner-car-info">
         <h3 class="owner-card-name"><%= booking.user.first_name %> <%= booking.user.last_name %></h3>
         <p class="owner-card-description"><%= booking.start_date.strftime("%b %d") %> - <%= booking.end_date.strftime("%b %d") %></p>
+        <div class="last-class" >
+          <div class="nb-guest">
+            <i class="fa-solid fa-users"></i>
+            <p><%= booking.number_of_guest %></p>
+          </div>
+          <div class="nb-guest">
+            <i class="fa-solid fa-euro-sign"></i>
+            <p><%= booking.property.price_per_night * (booking.end_date-booking.start_date).to_i %></p>
+          </div>
+        </div>
+
         <div class="owner-choice-container">
           <%= link_to "Accept", accept_owner_booking_path(booking), class: "owner-accept", data: {turbo_method: :patch} %>
           <%= link_to "Refuse", refuse_owner_booking_path(booking), class: "owner-refuse", data: {turbo_method: :patch} %>

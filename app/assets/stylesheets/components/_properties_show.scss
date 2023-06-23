@@ -1,5 +1,28 @@
 @import 'variables';
 
+
+.back-plate-property {
+  box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  padding-top: 50px;
+
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  position: relative;
+}
+
+.add-property-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
 .property-show-section {
     justify-content: space-around;
 
@@ -47,10 +70,15 @@
         }
 
         .property-rating-stars {
-            font-size: 2.5rem;
+            font-size: 1.5rem;
+            margin-top: -15px
         }
     }
 
+.overview-css {
+  font-size: 17px;
+  color: grey;
+}
     .property-show-book-part {
         width: 450px;
         border-radius: 10px;
@@ -65,7 +93,7 @@
         box-shadow: 0 0 24px 8px rgba(0, 0, 0, 0.10);
         padding: 25px;
 
-        height: 250px;
+        height: 300px;
 
     }
 
@@ -118,8 +146,35 @@
     align-items: center;
 }
 
+.form-input-select {
+
+  width: 350px;
+}
+
+.form-with-whom {
+  font-size: 18px;
+}
+
 .new-booking-label {
-    font-size: 18px;
+    font-size: 24px;
+}
+.last-class {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nb-guest {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    font-size: 20px;
+    margin-left: 5px;
+  }
 }
 
 .new-booking-date-input {
@@ -133,10 +188,11 @@
     color: $pri-color;
     border-radius: 15px;
     font-size: 1.3rem;
-    padding: 10px 15px;
+    padding: 3px 15px;
     opacity: .75;
     background-color: $sec-color;
     transition: .2s ease;
+    margin-top: 15px;
 
     &:hover {
         border: 2px $sec-color solid;
@@ -157,3 +213,4 @@
     background-color: #6554af;
     box-shadow: 0 0 30px #333;
 }
+

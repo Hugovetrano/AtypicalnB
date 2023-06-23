@@ -1,5 +1,5 @@
-
-<div class="mapsearch little-back-plate">
+<div class="mapsearch map-box-container closed" data-controller="map-switch">
+<i class="fa-solid fa-map-location-dot close-map-arrow" data-action="click->map-switch#switch"></i>
   <div class="searchbar">
     <%= form_with url: properties_path, method: :get do %>
       <%= text_field_tag :query,

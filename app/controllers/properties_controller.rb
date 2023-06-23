@@ -18,7 +18,7 @@ class PropertiesController < ApplicationController
       {
         lat: property.latitude,
         lng: property.longitude,
-        info_window_html: render_to_string(partial: "info_window", locals: { property: property })
+        info_window_html: render_to_string(partial: "shared/info_window", locals: { property: property })
       }
     end
   end

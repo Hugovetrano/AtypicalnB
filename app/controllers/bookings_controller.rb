@@ -21,7 +21,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :property_id, photos: [])
+    params.require(:booking).permit(:start_date, :end_date, :property_id, :number_of_guest, photos: [])
   end
 
   def check_owner_mode

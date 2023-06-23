@@ -20,7 +20,7 @@
     }
 
     &.closed {
-        right: -355px;
+        right: -330px;
         -webkit-animation: shake-horizontal 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
         animation: shake-horizontal 8s cubic-bezier(0.455, 0.030, 0.515, 0.955) infinite both;
     }
@@ -33,6 +33,7 @@
         fill: $sec-color;
         opacity: .25;
     }
+
 }
 
 .mapsearch {

@@ -50,3 +50,7 @@ body::-webkit-scrollbar {
     border-radius: 20px; /* roundness of the scroll thumb */
     border: 3px solid $pri-color; /* creates padding around scroll thumb */
   }
+
+  *:focus, *:focus-visible, *:focus-within {
+    outline: none !important;
+  }
